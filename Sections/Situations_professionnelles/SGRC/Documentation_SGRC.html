@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation SGRC – Mon Portfolio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="SGRC.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Petrachi Diego</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="../../../Portofoglio.html">Retour au Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../Projets perso.html">Retour aux Projets Personnels</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Section principale -->
+<section class="py-5 bg-light text-dark mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <!-- Contexte -->
+        <div class="card shadow-sm rounded mb-4 border-0">
+          <div class="card-body">
+            <h3 class="text-primary"><i class="fas fa-info-circle mr-2"></i>Contexte</h3>
+            <p><strong>SGRC</strong> est un projet web développé dans un contexte scolaire, au sein d’un lycée, visant à digitaliser la prise et la gestion des commandes dans un service de restauration. Il implique plusieurs profils utilisateurs (service, caisse, cuisine, bar, admin).</p>
+          </div>
+        </div>
+
+        <!-- Objectifs (d’après "Finis") -->
+        <div class="card shadow-sm rounded mb-4 border-0">
+          <div class="card-body">
+            <h3 class="text-success"><i class="fas fa-bullseye mr-2"></i>Objectifs atteints</h3>
+            <ul>
+              <li>Corriger l’actualisation automatique de la page pour améliorer l’expérience utilisateur</li>
+              <li>Ajouter la possibilité de revenir en arrière sur l'étape du dressage (bouton)</li>
+              <li>Aligner les titres avec les champs sur l’interface du service</li>
+              <li>Empêcher que le refresh rapide empêche la saisie des commentaires</li>
+              <li>Gérer les boutons ON/OFF et bloquer leur désactivation intempestive</li>
+              <li>Créer une gestion complète des états (commande en cours, prête, servie…)</li>
+              <li>Ajouter des icônes pour la gestion des types de tables</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tâches en cours -->
+        <div class="card shadow-sm rounded mb-4 border-0">
+          <div class="card-body">
+            <h3 class="text-warning"><i class="fas fa-spinner mr-2"></i>Travail en cours</h3>
+            <ul>
+              <li>Personnalisation des pop-up pour la caisse</li>
+              <li>Notification envoyée lorsque le plat est prêt</li>
+              <li>Rendre les onglets plus responsive</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Problèmes à tester -->
+        <div class="card shadow-sm rounded mb-4 border-0">
+          <div class="card-body">
+            <h3 class="text-info"><i class="fas fa-vial mr-2"></i>Tests à effectuer</h3>
+            <ul>
+              <li>Changer les couleurs des textes sur le compte caisse en "mode clair"</li>
+              <li>Vérification de la gestion des dates sur les tickets</li>
+              <li>Vérifier que le statement 24 est bien pris en compte côté admin</li>
+              <li>Vérifier dans carte_menu les requêtes similaires à statement 29</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Suggestions et pistes d’amélioration -->
+        <div class="card shadow-sm rounded mb-4 border-0">
+          <div class="card-body">
+            <h3 class="text-dark"><i class="fas fa-lightbulb mr-2"></i>Pistes d'amélioration</h3>
+            <ul>
+              <li>Ajouter un bouton pour modifier les commandes sur les tickets (caisse)</li>
+              <li>Améliorer l'interface graphique selon le type d'utilisateur</li>
+              <li>Optimiser la prise de commande dans le service</li>
+              <li>Ajouter un contrôle pour éviter la suppression d’un menu avec commandes actives</li>
+              <li>Vérifier la suppression via "suppr carte" (problème de cascade sur les plats)</li>
+              <li>Mettre en place une meilleure gestion des états du ticket tout au long du traitement</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Compétences -->
+        <div class="card shadow-sm rounded mb-4 border-0">
+          <div class="card-body">
+            <h3 class="text-secondary"><i class="fas fa-brain mr-2" style="color:pink;"></i>Compétences mobilisées</h3>
+            <ul>
+              <li>Développement Web en PHP/MySQL</li>
+              <li>Gestion des rôles et permissions utilisateur</li>
+              <li>Optimisation UX (responsive, visual feedback, messages)</li>
+              <li>Utilisation d’outils de gestion agile (Trello)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p>Vous pouvez me contacter à l'adresse email : <a href="mailto:diegotar005@gmail.com">diegotar005@gmail.com</a></p>
+    <p>Numéro de téléphone : +33 7 83 12 59 88</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/diego-petrachi-071a72267/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="mb-0">&copy; 2024 Petrachi Diego. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

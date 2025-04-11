@@ -1,0 +1,29 @@
+.text-left {
+    float: left;
+    background-color: lightgray;
+}
+
+.text-right {
+    float: right;
+    background-color: lightgray;
+} 
+.text-left {
+    margin-left:85px;
+    border: 2px double #000;
+    padding: 10px;
+    background-color: lightgray;
+}
+.text-right {
+    margin-right: 90px;
+    border: 2px double #000;
+    padding: 10px;
+}
+.no-wrap-text {
+    white-space: nowrap;
+    background-color: lightgray;
+}
+
+.no-wrap-text {
+    white-space: nowrap;
+    background-color: lightgray;
+}
