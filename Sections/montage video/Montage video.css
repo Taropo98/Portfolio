@@ -1,0 +1,76 @@
+/* Réglages généraux du corps de la page */
+body {
+    padding-top: 56px; /* Espace en haut équivalent à la hauteur de la barre de navigation fixe */
+    background-color: #f8f9fa; /* Couleur de fond */
+    color: #343a40; /* Couleur du texte principal */
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    background-color: #343a40; /* Couleur de fond de la barre de navigation */
+}
+
+/* Styles pour la marque de la barre de navigation et les liens */
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* Couleur du texte pour la marque et les liens (important pour priorité) */
+}
+
+/* Styles au survol pour la marque de la barre de navigation et les liens */
+.navbar-brand:hover, .nav-link:hover {
+    color: #ffc107 !important; /* Couleur du texte au survol pour la marque et les liens */
+}
+
+/* Styles pour les cartes */
+.card {
+    border: none; /* Pas de bordure */
+    background: #ffffff; /* Fond blanc */
+}
+
+/* Styles pour le bouton primaire */
+.btn-primary {
+    background-color: #343a40; /* Couleur de fond du bouton primaire */
+    border: none; /* Pas de bordure */
+}
+
+/* Styles au survol pour le bouton primaire */
+.btn-primary:hover {
+    background-color: #ffc107; /* Couleur de fond au survol du bouton primaire */
+}
+
+/* Styles pour les titres de niveau 3 */
+.h3 {
+    margin-top: 0; /* Aucune marge en haut */
+}
+
+/* Styles pour les paragraphes */
+.p {
+    margin-bottom: 0; /* Aucune marge en bas */
+}
+
+/* Styles pour la section de vidéos */
+.videos {
+    margin-top: 20px; /* Marge en haut pour la section de vidéos */
+}
+
+/* Styles pour chaque vidéo individuelle */
+.video {
+    margin-bottom: 20px; /* Marge en bas pour chaque vidéo */
+}
+
+/* Styles pour les iframes des vidéos */
+.video iframe {
+    width: 100%; /* Largeur à 100% */
+    height: 300px; /* Hauteur fixe de 300 pixels */
+}
+
+/* Style des icônes de réseaux sociaux */
+.social-icons a {
+    color: #ffffff; /* Couleur blanche par défaut */
+    margin: 0 10px; /* Espacement horizontal entre les icônes */
+    transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+/* Effet de survol pour les icônes de réseaux sociaux */
+.social-icons a:hover {
+    color: #ffc107; /* Changement de couleur au survol (jaune) */
+}

@@ -1,0 +1,28 @@
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+body {
+	background-image: url("earphones1.png");
+	background-size: cover;
+	background-repeat: no-repeat
+}
+.text-encadre {
+    border: 2px solid black;
+	background-color: #B9B2AD;
+	text-align: center;
+}
+.ecouteurs {
+    text-align: right;
+}
+.haut {
+	border: 2px solid black;
+    padding: 30px;
+    width: 300px;
+	background-color: #B9B2AD;
+	margin-top: -300px;
+	text-align: center;
+}
+.red {
+	color: red;
+}

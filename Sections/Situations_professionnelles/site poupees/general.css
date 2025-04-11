@@ -1,0 +1,38 @@
+* {
+    margin: 0; /* Redimensionner la marge */
+    padding: 0; /* Redimensionner la marge intérieur */
+    box-sizing: border-box; /*la largeur et la hauteur*/
+}
+p1 {
+	font-family: Arial Black; /* Police du texte*/
+	font-size: 40px; /* Grandeur du texte*/
+}
+body {
+	margin: 0;
+    padding: 0;
+    background-image: url('images/enfants.png');
+    background-size: cover; /* Redimensionner le fond d'écran pour couvrir toute la fenêtre */
+	background-attachment: fixed; /* Définir que le fond d'écran reste fixe*/
+    background-repeat: no-repeat; /* Définir que le fond d'écran ne se répéte pas*/
+}
+p2 {
+	font-family: impact;
+	font-size: 21px;
+}
+tbody {
+	background-color: #131312;
+	color: #FFFFFF;
+	font-size: 28px;
+}
+th, td {
+    border: 1px solid #ccc;
+	padding: 8px;
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
