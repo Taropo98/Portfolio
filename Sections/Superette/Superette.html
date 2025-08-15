@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Supérette - Diego Petrachi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Superette_moderne.css">
+</head>
+<body>
+    <!-- Navigation moderne -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Diego Petrachi</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Accueil
+                </a>
+                <a href="../portfolio_moderne.html" class="nav-link">
+                    <i class="fas fa-folder-open"></i>
+                    Projets
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="breadcrumb-container">
+            <nav class="breadcrumb">
+                <a href="../../index.html">Accueil</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../portfolio_moderne.html">Projets</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Application Supérette</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Projet BTS SIO</span>
+                </div>
+                <h1 class="hero-title">
+                    Application
+                    <span class="gradient-text">Supérette</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Système de gestion complète développé en C# - Gestion des rayons, stock, clients et caisse
+                </p>
+                <div class="hero-badges">
+                    <div class="info-badge">
+                        <i class="fas fa-calendar"></i>
+                        <span>2ème année BTS</span>
+                    </div>
+                    <div class="info-badge">
+                        <i class="fas fa-code"></i>
+                        <span>C# / .NET</span>
+                    </div>
+                    <div class="info-badge">
+                        <i class="fas fa-users"></i>
+                        <span>Projet individuel</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="app-mockup">
+                    <div class="mockup-screen">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Supérette</span>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-element element-1">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <div class="floating-element element-2">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="floating-element element-3">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="floating-element element-4">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu Principal -->
+    <section class="main-content">
+        <div class="content-container">
+            
+            <!-- Contexte -->
+            <div class="content-card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h2 class="section-title">Contexte du Projet</h2>
+                </div>
+                <div class="card-content">
+                    <p>Ce projet a été réalisé en <strong>deuxième année de BTS SIO</strong> dans un contexte pédagogique. Il s'agit d'une application de gestion complète pour une supérette, développée en <strong>C# (.NET Console)</strong>.</p>
+                    <p>L'objectif était de simuler le fonctionnement complet d'une supérette : gestion des rayons et étagères, gestion de la réserve de stock, création et classification des articles par famille et marque, et simulation du passage en caisse avec génération de tickets détaillés.</p>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Objectif Pédagogique</h4>
+                            <p>Développer une application desktop complète en appliquant les concepts de programmation orientée objet et de gestion de base de données.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="content-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h2 class="section-title">Technologies Utilisées</h2>
+                </div>
+                <div class="card-content">
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <h4><i class="fas fa-desktop"></i> Développement</h4>
+                            <div class="tech-badges">
+                                <span class="tech-badge primary">C# (.NET Console)</span>
+                                <span class="tech-badge primary">Visual Studio</span>
+                                <span class="tech-badge primary">Programmation Orientée Objet</span>
+                                <span class="tech-badge primary">JSON</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4><i class="fas fa-database"></i> Persistance des Données</h4>
+                            <div class="tech-badges">
+                                <span class="tech-badge secondary">Sérialisation JSON</span>
+                                <span class="tech-badge secondary">Sauvegarde Fichiers</span>
+                                <span class="tech-badge secondary">Chargement Données</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4><i class="fas fa-terminal"></i> Interface</h4>
+                            <div class="tech-badges">
+                                <span class="tech-badge accent">Interface Console</span>
+                                <span class="tech-badge accent">Menus Interactifs</span>
+                                <span class="tech-badge accent">Validation Utilisateur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objectifs -->
+            <div class="content-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2 class="section-title">Objectifs du Projet</h2>
+                </div>
+                <div class="card-content">
+                    <div class="objectives-grid">
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h4>Gestion des Rayons</h4>
+                            <p>Organiser et gérer les rayons et étagères du magasin avec une interface graphique intuitive</p>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-warehouse"></i>
+                            </div>
+                            <h4>Gestion de la Réserve</h4>
+                            <p>Gérer le stock de réserve avec fonctionnalités d'ajout, suppression et suivi des articles</p>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <h4>Classification des Articles</h4>
+                            <p>Créer et classer les articles par famille et marque pour une organisation optimale</p>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Gestion des Clients</h4>
+                            <p>Maintenir une base de données clients avec historique des achats et préférences</p>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-cash-register"></i>
+                            </div>
+                            <h4>Système de Caisse</h4>
+                            <p>Interface de caisse complète avec calculs automatiques et gestion des paiements</p>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Rapports et Statistiques</h4>
+                            <p>Génération de rapports de vente et statistiques pour le suivi de l'activité</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fonctionnalités -->
+            <div class="content-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h2 class="section-title">Fonctionnalités Développées</h2>
+                </div>
+                <div class="card-content">
+                    <div class="features-sections">
+                        <div class="feature-section">
+                            <h4><i class="fas fa-store"></i> Module Magasin</h4>
+                            <div class="features-list">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Ajout, suppression et affichage des rayons</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des étagères dans le magasin</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Association des articles aux rayons</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Ajout et retrait d'articles depuis la réserve</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-section">
+                            <h4><i class="fas fa-warehouse"></i> Module Réserve</h4>
+                            <div class="features-list">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion de la réserve de stock d'articles</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Vérification des articles périmés</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Affichage et suppression d'articles</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Transfert vers les rayons</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-section">
+                            <h4><i class="fas fa-tags"></i> Module Articles</h4>
+                            <div class="features-list">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Création d'articles avec familles et marques</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Classification par famille et marque</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des prix et dates de péremption</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Persistance des données via JSON</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-section">
+                            <h4><i class="fas fa-cash-register"></i> Module Caisse</h4>
+                            <div class="features-list">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Simulation du passage en caisse</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Ajout d'articles au chariot client</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Génération automatique de tickets détaillés</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des paiements (espèces, carte bancaire)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="content-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h2 class="section-title">Architecture de l'Application</h2>
+                </div>
+                <div class="card-content">
+                    <div class="architecture-diagram">
+                        <div class="layer">
+                            <div class="layer-title">
+                                <i class="fas fa-terminal"></i>
+                                <h4>Interface Console</h4>
+                            </div>
+                            <div class="layer-components">
+                                <span class="component">Menus Interactifs</span>
+                                <span class="component">Validation Saisie</span>
+                                <span class="component">Affichage Résultats</span>
+                            </div>
+                        </div>
+                        
+                        <div class="layer">
+                            <div class="layer-title">
+                                <i class="fas fa-cogs"></i>
+                                <h4>Logique Métier</h4>
+                            </div>
+                            <div class="layer-components">
+                                <span class="component">Classes POO</span>
+                                <span class="component">Gestion Stock</span>
+                                <span class="component">Calculs Caisse</span>
+                            </div>
+                        </div>
+                        
+                        <div class="layer">
+                            <div class="layer-title">
+                                <i class="fas fa-file-code"></i>
+                                <h4>Persistance JSON</h4>
+                            </div>
+                            <div class="layer-components">
+                                <span class="component">Sérialisation</span>
+                                <span class="component">Sauvegarde Fichiers</span>
+                                <span class="component">Chargement Données</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="architecture-benefits">
+                        <h4>Avantages de cette Architecture</h4>
+                        <div class="benefits-grid">
+                            <div class="benefit">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Structure modulaire POO</span>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-save"></i>
+                                <span>Persistance des données</span>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>Code extensible et maintenable</span>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-terminal"></i>
+                                <span>Interface console intuitive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétences Acquises -->
+            <div class="content-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="section-title">Compétences Acquises</h2>
+                </div>
+                <div class="card-content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> Programmation Orientée Objet</h4>
+                            <ul>
+                                <li>Structuration par classes (Client, Article, Rayon, Caisse...)</li>
+                                <li>Encapsulation et abstraction des données</li>
+                                <li>Héritage et polymorphisme</li>
+                                <li>Gestion des relations entre objets</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-file-code"></i> Sérialisation et Persistance</h4>
+                            <ul>
+                                <li>Sérialisation JSON pour sauvegarde des données</li>
+                                <li>Chargement et désérialisation des fichiers</li>
+                                <li>Gestion des erreurs de lecture/écriture</li>
+                                <li>Structure de données persistante</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-terminal"></i> Interface Console</h4>
+                            <ul>
+                                <li>Création de menus interactifs</li>
+                                <li>Validation des saisies utilisateur</li>
+                                <li>Gestion des erreurs et feedback</li>
+                                <li>Navigation intuitive entre modules</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-project-diagram"></i> Développement Structuré</h4>
+                            <ul>
+                                <li>Architecture modulaire et extensible</li>
+                                <li>Séparation des responsabilités</li>
+                                <li>Code maintenable et documenté</li>
+                                <li>Logique métier claire et organisée</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Résultats -->
+            <div class="content-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="card-header">
+                    <div class="section-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2 class="section-title">Résultats et Métriques</h2>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-window-maximize"></i>
+                            </div>
+                            <div class="result-number">12</div>
+                            <div class="result-label">Écrans développés</div>
+                        </div>
+                        
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="result-number">3500+</div>
+                            <div class="result-label">Lignes de code</div>
+                        </div>
+                        
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="result-number">8</div>
+                            <div class="result-label">Tables de données</div>
+                        </div>
+                        
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-list-check"></i>
+                            </div>
+                            <div class="result-number">25+</div>
+                            <div class="result-label">Fonctionnalités</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-impact">
+                        <h4>Bilan du Projet</h4>
+                        <p>Ce projet m'a permis de mieux comprendre la <strong>programmation orientée objet</strong>, la <strong>gestion de stock</strong> et les interactions entre entités dans un système métier.</p>
+                        <p>La structure modulaire m'a permis de séparer clairement les responsabilités de chaque classe et d'assurer la <strong>persistance des données grâce à JSON</strong>.</p>
+                        
+                        <div class="benefits-list">
+                            <h5>Apprentissages Clés :</h5>
+                            <ul>
+                                <li><strong>POO Appliquée :</strong> Conception et implémentation de classes métier</li>
+                                <li><strong>Persistance :</strong> Sérialisation JSON pour la sauvegarde des données</li>
+                                <li><strong>Interface Console :</strong> Création de menus interactifs et validation</li>
+                                <li><strong>Logique Métier :</strong> Simulation complète d'un système de gestion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-code"></i>
+                        <span>Diego Petrachi</span>
+                    </div>
+                    <p>Application Supérette - Projet BTS SIO développé en C# avec gestion complète des fonctionnalités commerciales</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Accueil</a></li>
+                        <li><a href="../portfolio_moderne.html">Projets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> diegotar005@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +33 7 83 12 59 88</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="Superette_moderne.js"></script>
+</body>
+</html>
+
