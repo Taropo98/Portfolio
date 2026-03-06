@@ -175,7 +175,6 @@ class PortfolioManager {
             ia: 0,
             video: 0,
             jeux: 0,
-<<<<<<< HEAD
             creative: 0,
             'lang-python': 0,
             'lang-js': 0,
@@ -186,9 +185,6 @@ class PortfolioManager {
             'lang-html': 0,
             'termine': 0,
             'en-cours': 0
-=======
-            creative: 0
->>>>>>> c8fc5fc7378237917ff3b4cf8c777287f334d6af
         };
         
         this.projects.forEach(project => {
@@ -535,7 +531,6 @@ let portfolioManager;
 document.addEventListener('DOMContentLoaded', () => {
     portfolioManager = new PortfolioManager();
     
-<<<<<<< HEAD
     // Gestion du filtre via paramètre URL (?filter=jeux, ?filter=personnel, etc.)
     const urlParams = new URLSearchParams(window.location.search);
     const filterParam = urlParams.get('filter');
@@ -551,8 +546,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-=======
->>>>>>> c8fc5fc7378237917ff3b4cf8c777287f334d6af
     // Animation de la navbar au scroll
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
@@ -582,9 +575,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-<<<<<<< HEAD
 });
-=======
-});
-
->>>>>>> c8fc5fc7378237917ff3b4cf8c777287f334d6af
