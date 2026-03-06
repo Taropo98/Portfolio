@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous mes projets — Diego Petrachi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio_moderne.css">
+    <style>
+        /* ===== OVERRIDES COHÉRENTS AVEC INDEX.HTML ===== */
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --success: #4ade80;
+            --warning: #fbbf24;
+            --danger: #ef4444;
+            --dark: #1f2937;
+            --light: #f8fafc;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+            --border-radius: 0.5rem;
+            --border-radius-lg: 1rem;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Bouton CV nav */
+        .nav-link-cv {
+            background: var(--gradient-primary);
+            color: white !important;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(102,126,234,0.4);
+        }
+        .nav-link-cv:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(102,126,234,0.6);
+            color: white !important;
+        }
+
+        /* Badges cohérents avec index.html */
+        .badge-stage    { background: rgba(239,68,68,0.85);   color: #fff; }
+        .badge-bts      { background: rgba(102,126,234,0.9);  color: #fff; }
+        .badge-personnel{ background: rgba(74,222,128,0.9);   color: #1f2937; }
+        .badge-outils   { background: rgba(251,191,36,0.9);   color: #1f2937; }
+        .badge-tech     { background: rgba(118,75,162,0.85);  color: #fff; }
+        .badge-web      { background: rgba(14,165,233,0.85);  color: #fff; }
+        .badge-ia       { background: rgba(240,147,251,0.9);  color: #1f2937; }
+        .badge-video    { background: rgba(251,113,133,0.9);  color: #fff; }
+        .badge-jeux     { background: rgba(52,211,153,0.9);   color: #1f2937; }
+        .badge-creative { background: rgba(251,191,36,0.9);   color: #1f2937; }
+        .badge-new      { background: rgba(251,191,36,0.95);  color: #1f2937; font-weight: 700; }
+        .badge-wip      { background: rgba(251,146,60,0.9);   color: #fff; }
+
+        /* Icône de carte sans image */
+        .card-icon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            background: var(--gradient-primary);
+        }
+        .card-icon-mail   { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .card-icon-ia     { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .card-icon-voice  { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .card-icon-glpi   { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .card-icon-shop   { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .card-icon-stock  { background: linear-gradient(135deg, #f7971e, #ffd200); }
+        .card-icon-game   { background: linear-gradient(135deg, #4ade80, #22c55e); }
+        .card-icon-video  { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .card-icon-video2 { background: linear-gradient(135deg, #667eea, #764ba2); }
+
+        /* Filtre actif style index.html */
+        .filter-btn.active {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            border-color: transparent !important;
+        }
+
+        /* Compteur total dans le hero */
+        .hero-stat-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 1rem;
+            padding: 0.75rem 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+        }
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+
+        /* Retour accueil flottant */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.35);
+            color: white;
+        }
+
+        /* Badges langages */
+        .badge-lang-python { background: rgba(55,118,171,0.85); color: #fff; }
+        .badge-lang-js     { background: rgba(247,223,30,0.9);  color: #1f2937; }
+        .badge-lang-nodejs { background: rgba(51,153,51,0.9);   color: #fff; }
+        .badge-lang-php    { background: rgba(119,123,180,0.9); color: #fff; }
+        .badge-lang-csharp { background: rgba(155,79,150,0.85); color: #fff; }
+        .badge-lang-sql    { background: rgba(0,117,143,0.85);  color: #fff; }
+        .badge-lang-html   { background: rgba(228,77,38,0.85);  color: #fff; }
+
+        /* Badges statut */
+        .badge-termine  { background: rgba(74,222,128,0.9);  color: #1f2937; }
+        .badge-en-cours { background: rgba(251,146,60,0.9);  color: #fff; }
+
+        /* Filtre statut - couleurs distinctives */
+        .filter-btn[data-filter="termine"].active  { background: linear-gradient(135deg,#4ade80,#22c55e) !important; color: #1f2937 !important; }
+        .filter-btn[data-filter="en-cours"].active { background: linear-gradient(135deg,#fb923c,#f97316) !important; color: #fff !important; }
+
+        /* Footer amélioré */
+        .footer-github a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-github a:hover { color: white; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Diego Petrachi</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Accueil
+                </a>
+                <a href="#projets" class="nav-link active">
+                    <i class="fas fa-folder-open"></i> Projets
+                </a>
+                <a href="../CV_Diego_Petrachi.pdf" class="nav-link nav-link-cv" download>
+                    <i class="fas fa-file-download"></i> Mon CV
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <a href="../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Tous mes</span>
+                    <span class="typewriter">Projets</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Des stages professionnels aux créations personnelles — explorez l'ensemble de mon travail
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="18">0</span>
+                        <span class="stat-label">Projets</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="floating-card card-1"><i class="fas fa-robot"></i></div>
+                    <div class="floating-card card-2"><i class="fas fa-envelope"></i></div>
+                    <div class="floating-card card-3"><i class="fas fa-gamepad"></i></div>
+                    <div class="floating-card card-4"><i class="fas fa-code"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section class="projects" id="projets">
+        <div class="projects-container">
+
+            <!-- Filtres -->
+            <div class="filters-section">
+                <div class="filters-header">
+                    <h2>Explorez mes projets</h2>
+                </div>
+                <div class="filters-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Rechercher un projet..." id="searchInput">
+                    </div>
+                    <div class="filter-groups">
+                        <div class="filter-group">
+                            <label>Catégorie</label>
+                            <div class="filter-buttons primary-filters">
+                                <button class="filter-btn active" data-filter="all">
+                                    Tous <span class="badge" id="count-all">18</span>
+                                </button>
+                                <button class="filter-btn" data-filter="stage">
+                                    <i class="fas fa-briefcase"></i> Stages <span class="badge" id="count-stage">2</span>
+                                </button>
+                                <button class="filter-btn" data-filter="bts">
+                                    <i class="fas fa-graduation-cap"></i> BTS SIO <span class="badge" id="count-bts">3</span>
+                                </button>
+                                <button class="filter-btn" data-filter="personnel">
+                                    <i class="fas fa-star"></i> Personnel <span class="badge" id="count-personnel">8</span>
+                                </button>
+                                <button class="filter-btn" data-filter="outils">
+                                    <i class="fas fa-robot"></i> Outils IA <span class="badge" id="count-outils">5</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label>Domaine</label>
+                            <div class="filter-buttons secondary-filters">
+                                <button class="filter-btn" data-filter="tech">
+                                    <i class="fas fa-laptop-code"></i> Tech
+                                </button>
+                                <button class="filter-btn" data-filter="web">
+                                    <i class="fas fa-globe"></i> Web
+                                </button>
+                                <button class="filter-btn" data-filter="ia">
+                                    <i class="fas fa-brain"></i> IA
+                                </button>
+                                <button class="filter-btn" data-filter="video">
+                                    <i class="fas fa-video"></i> Vidéo
+                                </button>
+                                <button class="filter-btn" data-filter="jeux">
+                                    <i class="fas fa-gamepad"></i> Jeux
+                                </button>
+                                <button class="filter-btn" data-filter="creative">
+                                    <i class="fas fa-palette"></i> Créatif
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Langage</label>
+                            <div class="filter-buttons secondary-filters">
+                                <button class="filter-btn" data-filter="lang-python">
+                                    <i class="fab fa-python"></i> Python
+                                </button>
+                                <button class="filter-btn" data-filter="lang-js">
+                                    <i class="fab fa-js-square"></i> JavaScript
+                                </button>
+                                <button class="filter-btn" data-filter="lang-nodejs">
+                                    <i class="fab fa-node-js"></i> Node.js
+                                </button>
+                                <button class="filter-btn" data-filter="lang-php">
+                                    <i class="fab fa-php"></i> PHP
+                                </button>
+                                <button class="filter-btn" data-filter="lang-csharp">
+                                    <i class="fas fa-hashtag"></i> C#
+                                </button>
+                                <button class="filter-btn" data-filter="lang-sql">
+                                    <i class="fas fa-database"></i> SQL
+                                </button>
+                                <button class="filter-btn" data-filter="lang-html">
+                                    <i class="fab fa-html5"></i> HTML/CSS
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Statut</label>
+                            <div class="filter-buttons secondary-filters">
+                                <button class="filter-btn" data-filter="termine">
+                                    <i class="fas fa-circle-check"></i> Terminé
+                                </button>
+                                <button class="filter-btn" data-filter="en-cours">
+                                    <i class="fas fa-circle-dot"></i> En cours
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grille de projets -->
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- ===== STAGES ===== -->
+                <div class="project-card" data-category="stage tech termine" data-keywords="mobelec borne électrique infrastructure réseau">
+                    <div class="card-image">
+                        <img src="images/Logo Mobelec.jpg" alt="Mobelec">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-stage">Stage</span>
+                                <span class="badge badge-tech">Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Stage — Mobelec</h3>
+                        <p class="card-description">Configuration de bornes de recharge électrique pour un lycée. Mise en place d'infrastructure IoT et réseau.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Infrastructure</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Réseau</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Stage1/Stage1.html" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="stage tech termine" data-keywords="acppa support technique maintenance utilisateurs helpdesk">
+                    <div class="card-image">
+                        <img src="images/logoACPPA.png" alt="ACPPA">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-stage">Stage</span>
+                                <span class="badge badge-tech">Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Stage — Groupe ACPPA</h3>
+                        <p class="card-description">Support technique, maintenance système et assistance utilisateurs au sein d'un groupe de résidences médicalisées.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Support</span>
+                            <span class="tech-tag">Maintenance</span>
+                            <span class="tech-tag">Helpdesk</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Stage2/Stage2.html" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== BTS SIO ===== -->
+                <div class="project-card" data-category="bts tech termine" data-keywords="glpi gestion parc informatique apache fusioninventory ticketing">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-glpi">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-bts">BTS SIO</span>
+                                <span class="badge badge-tech">Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">GLPI — Gestion du parc</h3>
+                        <p class="card-description">Déploiement de GLPI pour centraliser la gestion du matériel, des logiciels et des tickets d'assistance.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">GLPI</span>
+                            <span class="tech-tag">Apache</span>
+                            <span class="tech-tag">FusionInventory</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="GLPI/GLPI.html" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="bts tech lang-csharp lang-sql termine" data-keywords="superette gestion c# application dotnet json caisse">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-shop">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-bts">BTS SIO</span>
+                                <span class="badge badge-tech">Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Application Supérette</h3>
+                        <p class="card-description">Application C# de gestion complète pour une supérette : réserve, rayons, familles, clients, caisse et tickets.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">JSON</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Superette/Superette.html" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="bts tech web lang-php lang-js lang-sql termine" data-keywords="gestion stocks laravel php mysql javascript administration">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-stock">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-bts">BTS SIO</span>
+                                <span class="badge badge-web">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Gestion de stocks</h3>
+                        <p class="card-description">Application web Laravel de gestion de stocks avec interface d'administration, CRUD complet et authentification.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Stage2/Gestion_Stock/documentation_gestion_stock.html" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PROJETS PERSONNELS — IA ===== -->
+                <div class="project-card" data-category="personnel ia tech lang-python en-cours" data-keywords="assistante vocale python spotify reconnaissance commandes">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-voice">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-ia">IA</span>
+                                <span class="badge badge-wip">En cours</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Assistante Vocale</h3>
+                        <p class="card-description">Assistant vocal Python capable d'ouvrir des fichiers, accéder à des sites web et lancer de la musique sur Spotify via commandes vocales.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                            <span class="tech-tag">Spotify API</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary" disabled>
+                                <i class="fas fa-clock"></i> En développement
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="personnel ia tech lang-python lang-sql termine" data-keywords="création ia base données sql apprentissage machine learning">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-ia">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-ia">IA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Création d'IA</h3>
+                        <p class="card-description">Système d'IA capable de trouver des informations dans une base de données SQL avec descriptions et apprentissage automatique.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="IA/AI_projet_moderne.html" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> Voir étapes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== MAILAUTO ===== -->
+                <div class="project-card" data-category="personnel tech lang-nodejs lang-js termine" data-keywords="mailauto mail email météo automatique node.js json api openweather nodemailer svg">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-mail">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-tech">Tech</span>
+                                <span class="badge badge-new">Nouveau</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">MailAuto — Météo par e-mail</h3>
+                        <p class="card-description">Service Node.js qui envoie automatiquement chaque matin un e-mail avec les prévisions météo complètes et un graphique SVG. Première utilisation du format JSON pour consommer l'API REST OpenWeather.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">API REST</span>
+                            <span class="tech-tag">Nodemailer</span>
+                            <span class="tech-tag">OpenWeather</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://github.com/Taropo98/MailAutoPub" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== OUTILS IA ===== -->
+                <div class="project-card" data-category="outils ia termine" data-keywords="midjourney création images ia générative prompt">
+                    <div class="card-image">
+                        <img src="images/Midjourney.png" alt="Midjourney">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-outils">Outil IA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Midjourney</h3>
+                        <p class="card-description">IA pour la création d'images de haute qualité à partir de descriptions textuelles (prompt engineering).</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Génération d'images</span>
+                            <span class="tech-tag">Prompt</span>
+                            <span class="tech-tag">IA créative</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" onclick="openModal('midjourney')">
+                                <i class="fas fa-info"></i> En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="outils ia termine" data-keywords="stable diffusion open source images animation vidéo">
+                    <div class="card-image">
+                        <img src="images/Stable_Diffusion.png" alt="Stable Diffusion">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-outils">Outil IA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Stable Diffusion</h3>
+                        <p class="card-description">IA open-source pour la création d'images, d'animations et de vidéos avec contrôle avancé des paramètres.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Open Source</span>
+                            <span class="tech-tag">Animation</span>
+                            <span class="tech-tag">Vidéo</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" onclick="openModal('stablediffusion')">
+                                <i class="fas fa-info"></i> En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="outils ia termine" data-keywords="chatgpt conversation assistant texte génération openai">
+                    <div class="card-image">
+                        <img src="images/ChatGPT.png" alt="ChatGPT">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-outils">Outil IA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">ChatGPT</h3>
+                        <p class="card-description">Utilisation avancée de ChatGPT pour la génération de texte, l'assistance au code et la résolution de problèmes.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">Prompt</span>
+                            <span class="tech-tag">Assistance code</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" onclick="openModal('chatgpt')">
+                                <i class="fas fa-info"></i> En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="outils ia creative termine" data-keywords="replay voix remplacement musique audio ia">
+                    <div class="card-image">
+                        <img src="images/Replay.png" alt="Replay">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-outils">Outil IA</span>
+                                <span class="badge badge-creative">Créatif</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Replay</h3>
+                        <p class="card-description">Outil IA de remplacement de voix dans des musiques existantes pour créer des covers personnalisées.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Voice AI</span>
+                            <span class="tech-tag">Audio</span>
+                            <span class="tech-tag">Cover</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" onclick="openModal('replay')">
+                                <i class="fas fa-info"></i> En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="outils ia creative termine" data-keywords="suno musique création audio génération ia">
+                    <div class="card-image">
+                        <img src="images/Suno.png" alt="Suno">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-outils">Outil IA</span>
+                                <span class="badge badge-creative">Créatif</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Suno</h3>
+                        <p class="card-description">IA pour la création de musique originale à partir de descriptions textuelles et de styles musicaux.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Génération musicale</span>
+                            <span class="tech-tag">Audio</span>
+                            <span class="tech-tag">Créativité</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" onclick="openModal('suno')">
+                                <i class="fas fa-info"></i> En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== MONTAGE VIDÉO ===== -->
+                <div class="project-card" data-category="personnel video creative termine" data-keywords="for honor montage videopad gaming premier">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-video">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-video">Vidéo</span>
+                                <span class="badge badge-creative">Créatif</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Montage For Honor</h3>
+                        <p class="card-description">Une de mes premières vidéos de montage gaming réalisée avec VideoPad pour apprendre les bases du montage vidéo.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">VideoPad</span>
+                            <span class="tech-tag">Gaming</span>
+                            <span class="tech-tag">Montage</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Video/for honor centurion montage.mp4" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-play"></i> Voir vidéo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="personnel video creative termine" data-keywords="fights montage filmora récent avancé effets">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-video2">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-video">Vidéo</span>
+                                <span class="badge badge-creative">Créatif</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Montage Fights</h3>
+                        <p class="card-description">Une de mes dernières vidéos montrant l'évolution de mes compétences en montage avec Wondershare Filmora.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Filmora</span>
+                            <span class="tech-tag">Effets avancés</span>
+                            <span class="tech-tag">Gaming</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Video/Fights.mp4" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-play"></i> Voir vidéo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== JEUX VIDÉO ===== -->
+                <div class="project-card" data-category="personnel jeux tech lang-csharp termine" data-keywords="flappy bird unity c# premier jeu game dev">
+                    <div class="card-image">
+                        <div class="card-icon card-icon-game">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-jeux">Jeux</span>
+                                <span class="badge badge-tech">Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Flappy Bird</h3>
+                        <p class="card-description">Mon tout premier jeu inspiré de Flappy Bird, créé pour apprendre Unity et m'entraîner en programmation C#.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Game Dev</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="Jeu/JeuDiego.zip" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PROJETS WEB PERSO ===== -->
+                <div class="project-card" data-category="personnel web tech lang-html lang-js termine" data-keywords="africbantu ecommerce poupées culture africaine responsive storytelling">
+                    <div class="card-image">
+                        <img src="images/ecommerce_poupees.jpg" alt="AfricBantu">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-web">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">AfricBantu — E-commerce</h3>
+                        <p class="card-description">Site e-commerce de poupées noires célébrant la culture africaine avec 17 modèles uniques et storytelling authentique.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Responsive</span>
+                            <span class="tech-tag">Storytelling</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary" onclick="openModal('africbantu')">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </button>
+                            <a href="https://africbantu.fr/" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i> Visiter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="personnel web tech lang-html lang-js termine" data-keywords="feteloc location machines événements barbe papa glaces popcorn">
+                    <div class="card-image">
+                        <img src="images/location_machines.png" alt="FêteLoc">
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-web">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">FêteLoc — Location</h3>
+                        <p class="card-description">Plateforme de location de machines pour événements (barbe à papa, glaces, pop-corn) avec processus en 4 étapes.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Location</span>
+                            <span class="tech-tag">Événements</span>
+                            <span class="tech-tag">UX/UI</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary" onclick="openModal('feteloc')">
+                                <i class="fas fa-eye"></i> Voir détails
+                            </button>
+                            <a href="https://feteloc.fr/" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i> Visiter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /projects-grid -->
+
+            <!-- Aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-content">
+                    <i class="fas fa-search"></i>
+                    <h3>Aucun projet trouvé</h3>
+                    <p>Essayez de modifier vos filtres ou votre recherche</p>
+                    <button class="btn btn-primary" onclick="resetFilters()">
+                        <i class="fas fa-rotate-left"></i> Réinitialiser
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> diegotar005@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +33 7 83 12 59 88</p>
+                    <a href="../CV_Diego_Petrachi.pdf" class="btn btn-primary" download style="margin-top:0.75rem; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.85rem; padding:0.5rem 1rem; border-radius:2rem;">
+                        <i class="fas fa-file-download"></i> Télécharger mon CV
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/diego-petrachi-071a72267/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <div class="social-links">
+                        <a href="https://github.com/Taropo98" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <a href="../index.html" style="color:rgba(255,255,255,0.7); text-decoration:none; display:block; margin-bottom:0.4rem;">
+                        <i class="fas fa-home"></i> Accueil
+                    </a>
+                    <a href="#projets" style="color:rgba(255,255,255,0.7); text-decoration:none; display:block;">
+                        <i class="fas fa-folder-open"></i> Tous les projets
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modale -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="portfolio_moderne.js"></script>
+</body>
+</html>
