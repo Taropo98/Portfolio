@@ -9,9 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="GestionStock_moderne.css">
+    <style>
+        /* ===== Bouton langue i18n ===== */
+        .lang-toggle-btn {
+            display: flex; align-items: center; gap: 6px;
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);
+            color: rgb(0, 0, 0); padding: 6px 12px; border-radius: 20px;
+            cursor: pointer; font-size: 0.85rem; font-weight: 600;
+            transition: all 0.3s ease; backdrop-filter: blur(10px);
+            margin-left: 10px;
+        }
+        .lang-toggle-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-1px); }
+        .lang-flag { font-size: 1.1rem; }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
@@ -21,131 +33,100 @@
             <div class="nav-menu">
                 <a href="../../../index.html" class="nav-link">
                     <i class="fas fa-home"></i>
-                    Accueil
+                    <span data-i18n="nav.home">Accueil</span>
                 </a>
                 <a href="../../portfolio_moderne.html" class="nav-link">
                     <i class="fas fa-briefcase"></i>
-                    Projets
+                    <span data-i18n="nav.projects">Projets</span>
                 </a>
             </div>
+            <button id="lang-toggle" class="lang-toggle-btn" title="Switch to English">
+                <span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span>
+            </button>
             <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
     <section class="breadcrumb-section">
         <div class="breadcrumb-container">
             <nav class="breadcrumb">
-                <a href="../../../index.html">
-                    <i class="fas fa-home"></i>
-                    Accueil
-                </a>
+                <a href="../../../index.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Accueil</span></a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../../portfolio_moderne.html">Projets</a>
+                <a href="../../portfolio_moderne.html" data-i18n="nav.projects">Projets</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Gestion de Stock Laravel</span>
+                <span data-i18n="gs.breadcrumb">Gestion de Stock Laravel</span>
             </nav>
         </div>
     </section>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-graduation-cap"></i>
-                    Projet BTS SIO
+                    <span data-i18n="sgrc.badge">Projet BTS SIO</span>
                 </div>
                 <h1 class="hero-title">
-                    Gestion de Stock
-                    <span class="gradient-text">Système Multi-Sites Laravel</span>
+                    <span data-i18n="gs.title.pre">Gestion de Stock</span>
+                    <span class="gradient-text" data-i18n="gs.title.main">Système Multi-Sites Laravel</span>
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-i18n="gs.subtitle">
                     Application web complète de gestion de stock avec architecture Laravel MVC, système d'alertes automatisé, traçabilité complète et gestion multi-sites avec catégories dynamiques
                 </p>
                 <div class="hero-badges">
-                    <div class="info-badge">
-                        <i class="fab fa-laravel"></i>
-                        Laravel 10 / PHP 8.2
-                    </div>
-                    <div class="info-badge">
-                        <i class="fas fa-database"></i>
-                        MySQL / Eloquent ORM
-                    </div>
-                    <div class="info-badge">
-                        <i class="fas fa-chart-line"></i>
-                        Alertes Automatisées
-                    </div>
+                    <div class="info-badge"><i class="fab fa-laravel"></i> Laravel 10 / PHP 8.2</div>
+                    <div class="info-badge"><i class="fas fa-database"></i> MySQL / Eloquent ORM</div>
+                    <div class="info-badge"><i class="fas fa-chart-line"></i> <span data-i18n="gs.badge.alerts">Alertes Automatisées</span></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="stock-system">
-                    <div class="system-screen">
-                        <i class="fas fa-boxes"></i>
-                        <span>Stock Manager</span>
-                    </div>
+                    <div class="system-screen"><i class="fas fa-boxes"></i><span>Stock Manager</span></div>
                 </div>
                 <div class="floating-elements">
-                    <div class="floating-element element-1">
-                        <i class="fas fa-warehouse"></i>
-                    </div>
-                    <div class="floating-element element-2">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="floating-element element-3">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <div class="floating-element element-4">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
+                    <div class="floating-element element-1"><i class="fas fa-warehouse"></i></div>
+                    <div class="floating-element element-2"><i class="fas fa-chart-bar"></i></div>
+                    <div class="floating-element element-3"><i class="fas fa-bell"></i></div>
+                    <div class="floating-element element-4"><i class="fas fa-clipboard-list"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="content-container">
-            
-            <!-- Contexte du Projet -->
+
+            <!-- Contexte -->
             <div class="content-card">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-info-circle"></i>
-                    </div>
-                    <h2 class="section-title">Contexte du Projet</h2>
+                    <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                    <h2 class="section-title" data-i18n="sgrc.context.title">Contexte du Projet</h2>
                 </div>
                 <div class="card-content">
-                    <p>Durant mon stage au sein du <strong>groupe ACPPA</strong>, j'ai développé une application web complète de gestion de stock en Laravel. Cette solution innovante visait à organiser les produits par catégories et lieux, tout en assurant un suivi précis des mouvements et des actions via un système de logs automatisé.</p>
-                    
+                    <p data-i18n="gs.context.p1">Durant mon stage au sein du <strong>groupe ACPPA</strong>, j'ai développé une application web complète de gestion de stock en Laravel. Cette solution innovante visait à organiser les produits par catégories et lieux, tout en assurant un suivi précis des mouvements et des actions via un système de logs automatisé.</p>
                     <div class="highlight-box">
                         <i class="fas fa-target"></i>
                         <div>
-                            <h4>Objectif Principal</h4>
-                            <p>Créer une solution robuste de gestion de stock permettant l'inventaire automatisé, le suivi des équipements et la gestion des interventions techniques avec traçabilité complète des actions.</p>
+                            <h4 data-i18n="gs.context.highlight.title">Objectif Principal</h4>
+                            <p data-i18n="gs.context.highlight.text">Créer une solution robuste de gestion de stock permettant l'inventaire automatisé, le suivi des équipements et la gestion des interventions techniques avec traçabilité complète des actions.</p>
                         </div>
                     </div>
-
-                    <p>Le projet s'inscrivait dans une démarche d'optimisation des processus internes du groupe ACPPA, nécessitant une solution capable de gérer plusieurs sites simultanément avec des niveaux d'accès différenciés et un système d'alertes intelligent.</p>
+                    <p data-i18n="gs.context.p2">Le projet s'inscrivait dans une démarche d'optimisation des processus internes du groupe ACPPA, nécessitant une solution capable de gérer plusieurs sites simultanément avec des niveaux d'accès différenciés et un système d'alertes intelligent.</p>
                 </div>
             </div>
 
-            <!-- Architecture Technique -->
+            <!-- Architecture -->
             <div class="content-card">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-sitemap"></i>
-                    </div>
-                    <h2 class="section-title">Architecture Technique Laravel</h2>
+                    <div class="section-icon"><i class="fas fa-sitemap"></i></div>
+                    <h2 class="section-title" data-i18n="gs.arch.title">Architecture Technique Laravel</h2>
                 </div>
                 <div class="card-content">
                     <div class="tech-stack">
                         <div class="tech-category">
-                            <h4><i class="fab fa-laravel"></i> Framework & Backend</h4>
+                            <h4><i class="fab fa-laravel"></i> <span data-i18n="gs.tech.backend">Framework & Backend</span></h4>
                             <div class="tech-badges">
                                 <span class="tech-badge primary">Laravel 10</span>
                                 <span class="tech-badge primary">PHP 8.2</span>
@@ -154,19 +135,17 @@
                                 <span class="tech-badge primary">Artisan CLI</span>
                             </div>
                         </div>
-                        
                         <div class="tech-category">
-                            <h4><i class="fas fa-database"></i> Base de Données</h4>
+                            <h4><i class="fas fa-database"></i> <span data-i18n="gs.tech.db">Base de Données</span></h4>
                             <div class="tech-badges">
                                 <span class="tech-badge secondary">MySQL 8.0</span>
-                                <span class="tech-badge secondary">Migrations Laravel</span>
-                                <span class="tech-badge secondary">Relations Eloquent</span>
-                                <span class="tech-badge secondary">Contraintes FK</span>
+                                <span class="tech-badge secondary" data-i18n="gs.tech.migrations">Migrations Laravel</span>
+                                <span class="tech-badge secondary" data-i18n="gs.tech.relations">Relations Eloquent</span>
+                                <span class="tech-badge secondary" data-i18n="gs.tech.fk">Contraintes FK</span>
                             </div>
                         </div>
-                        
                         <div class="tech-category">
-                            <h4><i class="fas fa-code"></i> Frontend & Interface</h4>
+                            <h4><i class="fas fa-code"></i> <span data-i18n="gs.tech.frontend">Frontend & Interface</span></h4>
                             <div class="tech-badges">
                                 <span class="tech-badge accent">Blade Templates</span>
                                 <span class="tech-badge accent">Bootstrap 5</span>
@@ -176,43 +155,41 @@
                         </div>
                     </div>
 
-                    <h3>Structure MVC Détaillée</h3>
+                    <h3 data-i18n="gs.mvc.title">Structure MVC Détaillée</h3>
                     <div class="architecture-grid">
                         <div class="architecture-item">
-                            <h4><i class="fas fa-cogs"></i> Contrôleurs (7)</h4>
+                            <h4><i class="fas fa-cogs"></i> <span data-i18n="gs.mvc.controllers">Contrôleurs (7)</span></h4>
                             <ul>
-                                <li><strong>DashBoardController</strong> - Interface principale avec alertes automatiques</li>
-                                <li><strong>ListeProduitsController</strong> - CRUD complet produits avec codes uniques</li>
-                                <li><strong>ListeCategoriesController</strong> - Gestion catégories par lieu</li>
-                                <li><strong>ListeLieuController</strong> - Administration multi-sites</li>
-                                <li><strong>LogController</strong> - Système de logs avec fichiers datés</li>
-                                <li><strong>LoginController</strong> - Authentification sécurisée</li>
-                                <li><strong>Controller</strong> - Contrôleur de base Laravel</li>
+                                <li><strong>DashBoardController</strong> — <span data-i18n="gs.mvc.c1">Interface principale avec alertes automatiques</span></li>
+                                <li><strong>ListeProduitsController</strong> — <span data-i18n="gs.mvc.c2">CRUD complet produits avec codes uniques</span></li>
+                                <li><strong>ListeCategoriesController</strong> — <span data-i18n="gs.mvc.c3">Gestion catégories par lieu</span></li>
+                                <li><strong>ListeLieuController</strong> — <span data-i18n="gs.mvc.c4">Administration multi-sites</span></li>
+                                <li><strong>LogController</strong> — <span data-i18n="gs.mvc.c5">Système de logs avec fichiers datés</span></li>
+                                <li><strong>LoginController</strong> — <span data-i18n="gs.mvc.c6">Authentification sécurisée</span></li>
+                                <li><strong>Controller</strong> — <span data-i18n="gs.mvc.c7">Contrôleur de base Laravel</span></li>
                             </ul>
                         </div>
-                        
                         <div class="architecture-item">
-                            <h4><i class="fas fa-database"></i> Modèles Eloquent (5)</h4>
+                            <h4><i class="fas fa-database"></i> <span data-i18n="gs.mvc.models">Modèles Eloquent (5)</span></h4>
                             <ul>
-                                <li><strong>Produit</strong> - Entité principale (nom, quantité, limite, code unique)</li>
-                                <li><strong>Categorie</strong> - Organisation par catégories liées aux lieux</li>
-                                <li><strong>Lieu</strong> - Gestion multi-sites avec lieu par défaut</li>
-                                <li><strong>Admin</strong> - Gestion utilisateurs et authentification</li>
-                                <li><strong>CategorieLieu</strong> - Relations complexes many-to-many</li>
+                                <li><strong>Produit</strong> — <span data-i18n="gs.mvc.m1">Entité principale (nom, quantité, limite, code unique)</span></li>
+                                <li><strong>Categorie</strong> — <span data-i18n="gs.mvc.m2">Organisation par catégories liées aux lieux</span></li>
+                                <li><strong>Lieu</strong> — <span data-i18n="gs.mvc.m3">Gestion multi-sites avec lieu par défaut</span></li>
+                                <li><strong>Admin</strong> — <span data-i18n="gs.mvc.m4">Gestion utilisateurs et authentification</span></li>
+                                <li><strong>CategorieLieu</strong> — <span data-i18n="gs.mvc.m5">Relations complexes many-to-many</span></li>
                             </ul>
                         </div>
-                        
                         <div class="architecture-item">
-                            <h4><i class="fas fa-eye"></i> Vues Blade (8+)</h4>
+                            <h4><i class="fas fa-eye"></i> <span data-i18n="gs.mvc.views">Vues Blade (8+)</span></h4>
                             <ul>
-                                <li><strong>dashboardView</strong> - Tableau de bord avec alertes</li>
-                                <li><strong>ajouterproduitView</strong> - Formulaires produits</li>
-                                <li><strong>voirstockView</strong> - Visualisation stock par lieu</li>
-                                <li><strong>ajouterlieuView</strong> - Gestion lieux de stockage</li>
-                                <li><strong>ajoutercategorieView</strong> - Création catégories</li>
-                                <li><strong>voircategorieView</strong> - Liste catégories</li>
-                                <li><strong>logCompleteView</strong> - Historique complet</li>
-                                <li><strong>admin</strong> - Layout principal</li>
+                                <li><strong>dashboardView</strong> — <span data-i18n="gs.mvc.v1">Tableau de bord avec alertes</span></li>
+                                <li><strong>ajouterproduitView</strong> — <span data-i18n="gs.mvc.v2">Formulaires produits</span></li>
+                                <li><strong>voirstockView</strong> — <span data-i18n="gs.mvc.v3">Visualisation stock par lieu</span></li>
+                                <li><strong>ajouterlieuView</strong> — <span data-i18n="gs.mvc.v4">Gestion lieux de stockage</span></li>
+                                <li><strong>ajoutercategorieView</strong> — <span data-i18n="gs.mvc.v5">Création catégories</span></li>
+                                <li><strong>voircategorieView</strong> — <span data-i18n="gs.mvc.v6">Liste catégories</span></li>
+                                <li><strong>logCompleteView</strong> — <span data-i18n="gs.mvc.v7">Historique complet</span></li>
+                                <li><strong>admin</strong> — <span data-i18n="gs.mvc.v8">Layout principal</span></li>
                             </ul>
                         </div>
                     </div>
@@ -222,436 +199,258 @@
             <!-- Base de Données -->
             <div class="content-card">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h2 class="section-title">Structure Base de Données</h2>
+                    <div class="section-icon"><i class="fas fa-database"></i></div>
+                    <h2 class="section-title" data-i18n="gs.db.title">Structure Base de Données</h2>
                 </div>
                 <div class="card-content">
                     <div class="database-schema">
                         <div class="table-card">
                             <h4><i class="fas fa-table"></i> Table `produits`</h4>
                             <div class="table-fields">
-                                <div class="field">
-                                    <span class="field-name">id_produit</span>
-                                    <span class="field-type">Primary Key (Auto-increment)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">nom_produit</span>
-                                    <span class="field-type">String (Nom du produit)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">quantite</span>
-                                    <span class="field-type">Integer (Quantité en stock)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">limite</span>
-                                    <span class="field-type">Integer (Seuil d'alerte)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">description</span>
-                                    <span class="field-type">String Nullable (Description)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">code_produit</span>
-                                    <span class="field-type">String Unique (Code produit)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">categorie_id</span>
-                                    <span class="field-type">Foreign Key → categories</span>
-                                </div>
+                                <div class="field"><span class="field-name">id_produit</span><span class="field-type">Primary Key</span></div>
+                                <div class="field"><span class="field-name">nom_produit</span><span class="field-type"><span data-i18n="gs.db.product.name">String (Nom du produit)</span></span></div>
+                                <div class="field"><span class="field-name">quantite</span><span class="field-type"><span data-i18n="gs.db.product.qty">Integer (Quantité en stock)</span></span></div>
+                                <div class="field"><span class="field-name">limite</span><span class="field-type"><span data-i18n="gs.db.product.limit">Integer (Seuil d'alerte)</span></span></div>
+                                <div class="field"><span class="field-name">description</span><span class="field-type"><span data-i18n="gs.db.product.desc">String Nullable (Description)</span></span></div>
+                                <div class="field"><span class="field-name">code_produit</span><span class="field-type"><span data-i18n="gs.db.product.code">String Unique (Code produit)</span></span></div>
+                                <div class="field"><span class="field-name">categorie_id</span><span class="field-type">Foreign Key → categories</span></div>
                             </div>
                         </div>
-                        
                         <div class="table-card">
                             <h4><i class="fas fa-table"></i> Table `categories`</h4>
                             <div class="table-fields">
-                                <div class="field">
-                                    <span class="field-name">id_categorie</span>
-                                    <span class="field-type">Primary Key</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">nom_categorie</span>
-                                    <span class="field-type">String (Nom catégorie)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">id_lieu</span>
-                                    <span class="field-type">Foreign Key → lieux</span>
-                                </div>
+                                <div class="field"><span class="field-name">id_categorie</span><span class="field-type">Primary Key</span></div>
+                                <div class="field"><span class="field-name">nom_categorie</span><span class="field-type"><span data-i18n="gs.db.cat.name">String (Nom catégorie)</span></span></div>
+                                <div class="field"><span class="field-name">id_lieu</span><span class="field-type">Foreign Key → lieux</span></div>
                             </div>
                         </div>
-                        
                         <div class="table-card">
                             <h4><i class="fas fa-table"></i> Table `lieux`</h4>
                             <div class="table-fields">
-                                <div class="field">
-                                    <span class="field-name">id_lieu</span>
-                                    <span class="field-type">Primary Key</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">nom_lieu</span>
-                                    <span class="field-type">String (Nom du lieu)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">default_lieu</span>
-                                    <span class="field-type">Boolean (Lieu par défaut)</span>
-                                </div>
+                                <div class="field"><span class="field-name">id_lieu</span><span class="field-type">Primary Key</span></div>
+                                <div class="field"><span class="field-name">nom_lieu</span><span class="field-type"><span data-i18n="gs.db.lieu.name">String (Nom du lieu)</span></span></div>
+                                <div class="field"><span class="field-name">default_lieu</span><span class="field-type"><span data-i18n="gs.db.lieu.default">Boolean (Lieu par défaut)</span></span></div>
                             </div>
                         </div>
-                        
                         <div class="table-card">
                             <h4><i class="fas fa-table"></i> Table `admin`</h4>
                             <div class="table-fields">
-                                <div class="field">
-                                    <span class="field-name">id</span>
-                                    <span class="field-type">Primary Key</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">username</span>
-                                    <span class="field-type">String (Nom utilisateur)</span>
-                                </div>
-                                <div class="field">
-                                    <span class="field-name">password</span>
-                                    <span class="field-type">String (Mot de passe hashé)</span>
-                                </div>
+                                <div class="field"><span class="field-name">id</span><span class="field-type">Primary Key</span></div>
+                                <div class="field"><span class="field-name">username</span><span class="field-type"><span data-i18n="gs.db.admin.user">String (Nom utilisateur)</span></span></div>
+                                <div class="field"><span class="field-name">password</span><span class="field-type"><span data-i18n="gs.db.admin.pass">String (Mot de passe hashé)</span></span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Fonctionnalités Développées -->
+            <!-- Fonctionnalités -->
             <div class="content-card">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h2 class="section-title">Fonctionnalités Développées</h2>
+                    <div class="section-icon"><i class="fas fa-tools"></i></div>
+                    <h2 class="section-title" data-i18n="common.features.title">Fonctionnalités Développées</h2>
                 </div>
                 <div class="card-content">
                     <div class="features-grid">
                         <div class="feature-card">
                             <div class="feature-header">
-                                <div class="feature-icon">
-                                    <i class="fas fa-warehouse"></i>
-                                </div>
-                                <h3 class="feature-title">Gestion Multi-Sites</h3>
+                                <div class="feature-icon"><i class="fas fa-warehouse"></i></div>
+                                <h3 class="feature-title" data-i18n="gs.feat.multisite.title">Gestion Multi-Sites</h3>
                             </div>
-                            <p class="feature-description">
-                                Organisation hiérarchique des stocks par lieux géographiques avec catégories spécifiques et lieu par défaut configurable pour les alertes.
-                            </p>
+                            <p class="feature-description" data-i18n="gs.feat.multisite.desc">Organisation hiérarchique des stocks par lieux géographiques avec catégories spécifiques et lieu par défaut configurable pour les alertes.</p>
                             <ul class="feature-list">
-                                <li>Création et administration de lieux multiples</li>
-                                <li>Catégories spécifiques par lieu de stockage</li>
-                                <li>Lieu par défaut pour surveillance alertes</li>
-                                <li>Suppression automatique catégories vides</li>
-                                <li>Navigation par cartes interactives</li>
+                                <li data-i18n="gs.feat.multisite.1">Création et administration de lieux multiples</li>
+                                <li data-i18n="gs.feat.multisite.2">Catégories spécifiques par lieu de stockage</li>
+                                <li data-i18n="gs.feat.multisite.3">Lieu par défaut pour surveillance alertes</li>
+                                <li data-i18n="gs.feat.multisite.4">Suppression automatique catégories vides</li>
+                                <li data-i18n="gs.feat.multisite.5">Navigation par cartes interactives</li>
                             </ul>
                         </div>
-                        
                         <div class="feature-card">
                             <div class="feature-header">
-                                <div class="feature-icon">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                </div>
-                                <h3 class="feature-title">Système d'Alertes Intelligent</h3>
+                                <div class="feature-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                <h3 class="feature-title" data-i18n="gs.feat.alerts.title">Système d'Alertes Intelligent</h3>
                             </div>
-                            <p class="feature-description">
-                                Surveillance automatique des stocks avec alertes personnalisées, calcul des quantités à commander et notifications visuelles.
-                            </p>
+                            <p class="feature-description" data-i18n="gs.feat.alerts.desc">Surveillance automatique des stocks avec alertes personnalisées, calcul des quantités à commander et notifications visuelles.</p>
                             <ul class="feature-list">
-                                <li>Seuils d'alerte configurables par produit</li>
-                                <li>Calcul automatique quantités manquantes</li>
-                                <li>Notifications visuelles dashboard principal</li>
-                                <li>Surveillance lieu par défaut uniquement</li>
-                                <li>Badges colorés pour statuts critiques</li>
+                                <li data-i18n="gs.feat.alerts.1">Seuils d'alerte configurables par produit</li>
+                                <li data-i18n="gs.feat.alerts.2">Calcul automatique quantités manquantes</li>
+                                <li data-i18n="gs.feat.alerts.3">Notifications visuelles dashboard principal</li>
+                                <li data-i18n="gs.feat.alerts.4">Surveillance lieu par défaut uniquement</li>
+                                <li data-i18n="gs.feat.alerts.5">Badges colorés pour statuts critiques</li>
                             </ul>
                         </div>
-                        
                         <div class="feature-card">
                             <div class="feature-header">
-                                <div class="feature-icon">
-                                    <i class="fas fa-clipboard-list"></i>
-                                </div>
-                                <h3 class="feature-title">Traçabilité Complète</h3>
+                                <div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+                                <h3 class="feature-title" data-i18n="gs.feat.trace.title">Traçabilité Complète</h3>
                             </div>
-                            <p class="feature-description">
-                                Système de logs automatisé avec fichiers texte datés pour traçabilité complète de toutes les actions utilisateurs.
-                            </p>
+                            <p class="feature-description" data-i18n="gs.feat.trace.desc">Système de logs automatisé avec fichiers texte datés pour traçabilité complète de toutes les actions utilisateurs.</p>
                             <ul class="feature-list">
-                                <li>Logs automatiques toutes actions CRUD</li>
-                                <li>Fichiers texte structurés par date</li>
-                                <li>Historique complet consultable interface</li>
-                                <li>Traçabilité mouvements produits</li>
-                                <li>Logs suppression catégories vides</li>
+                                <li data-i18n="gs.feat.trace.1">Logs automatiques toutes actions CRUD</li>
+                                <li data-i18n="gs.feat.trace.2">Fichiers texte structurés par date</li>
+                                <li data-i18n="gs.feat.trace.3">Historique complet consultable interface</li>
+                                <li data-i18n="gs.feat.trace.4">Traçabilité mouvements produits</li>
+                                <li data-i18n="gs.feat.trace.5">Logs suppression catégories vides</li>
                             </ul>
                         </div>
-                        
                         <div class="feature-card">
                             <div class="feature-header">
-                                <div class="feature-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <h3 class="feature-title">CRUD Complet</h3>
+                                <div class="feature-icon"><i class="fas fa-database"></i></div>
+                                <h3 class="feature-title" data-i18n="gs.feat.crud.title">CRUD Complet</h3>
                             </div>
-                            <p class="feature-description">
-                                Interface complète de gestion avec opérations CRUD pour tous les éléments : produits, catégories, lieux.
-                            </p>
+                            <p class="feature-description" data-i18n="gs.feat.crud.desc">Interface complète de gestion avec opérations CRUD pour tous les éléments : produits, catégories, lieux.</p>
                             <ul class="feature-list">
-                                <li>Gestion produits avec codes uniques</li>
-                                <li>Création/modification/suppression catégories</li>
-                                <li>Administration complète lieux stockage</li>
-                                <li>Interface utilisateur intuitive Bootstrap</li>
-                                <li>Validation données côté serveur</li>
+                                <li data-i18n="gs.feat.crud.1">Gestion produits avec codes uniques</li>
+                                <li data-i18n="gs.feat.crud.2">Création/modification/suppression catégories</li>
+                                <li data-i18n="gs.feat.crud.3">Administration complète lieux stockage</li>
+                                <li data-i18n="gs.feat.crud.4">Interface utilisateur intuitive Bootstrap</li>
+                                <li data-i18n="gs.feat.crud.5">Validation données côté serveur</li>
                             </ul>
                         </div>
-                        
                         <div class="feature-card">
                             <div class="feature-header">
-                                <div class="feature-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <h3 class="feature-title">Dashboard Intelligent</h3>
+                                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                                <h3 class="feature-title" data-i18n="gs.feat.dashboard.title">Dashboard Intelligent</h3>
                             </div>
-                            <p class="feature-description">
-                                Tableau de bord centralisé avec vue d'ensemble temps réel et navigation intuitive par cartes lieux.
-                            </p>
+                            <p class="feature-description" data-i18n="gs.feat.dashboard.desc">Tableau de bord centralisé avec vue d'ensemble temps réel et navigation intuitive par cartes lieux.</p>
                             <ul class="feature-list">
-                                <li>Vue d'ensemble inventaire temps réel</li>
-                                <li>Navigation par cartes lieux interactives</li>
-                                <li>Compteurs catégories dynamiques</li>
-                                <li>Interface responsive Bootstrap moderne</li>
-                                <li>Alertes visuelles intégrées</li>
+                                <li data-i18n="gs.feat.dashboard.1">Vue d'ensemble inventaire temps réel</li>
+                                <li data-i18n="gs.feat.dashboard.2">Navigation par cartes lieux interactives</li>
+                                <li data-i18n="gs.feat.dashboard.3">Compteurs catégories dynamiques</li>
+                                <li data-i18n="gs.feat.dashboard.4">Interface responsive Bootstrap moderne</li>
+                                <li data-i18n="gs.feat.dashboard.5">Alertes visuelles intégrées</li>
                             </ul>
                         </div>
-                        
                         <div class="feature-card">
                             <div class="feature-header">
-                                <div class="feature-icon">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <h3 class="feature-title">Sécurité & Authentification</h3>
+                                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                                <h3 class="feature-title" data-i18n="gs.feat.auth.title">Sécurité & Authentification</h3>
                             </div>
-                            <p class="feature-description">
-                                Système d'authentification sécurisé avec gestion des sessions Laravel et protection CSRF intégrée.
-                            </p>
+                            <p class="feature-description" data-i18n="gs.feat.auth.desc">Système d'authentification sécurisé avec gestion des sessions Laravel et protection CSRF intégrée.</p>
                             <ul class="feature-list">
-                                <li>Authentification utilisateurs sécurisée</li>
-                                <li>Gestion sessions Laravel natives</li>
-                                <li>Protection CSRF automatique</li>
-                                <li>Contrôle d'accès par middleware</li>
-                                <li>Déconnexion sécurisée</li>
+                                <li data-i18n="gs.feat.auth.1">Authentification utilisateurs sécurisée</li>
+                                <li data-i18n="gs.feat.auth.2">Gestion sessions Laravel natives</li>
+                                <li data-i18n="gs.feat.auth.3">Protection CSRF automatique</li>
+                                <li data-i18n="gs.feat.auth.4">Contrôle d'accès par middleware</li>
+                                <li data-i18n="gs.feat.auth.5">Déconnexion sécurisée</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Routes et API -->
+            <!-- Routes -->
             <div class="content-card">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-route"></i>
-                    </div>
-                    <h2 class="section-title">Routes et Endpoints</h2>
+                    <div class="section-icon"><i class="fas fa-route"></i></div>
+                    <h2 class="section-title" data-i18n="gs.routes.title">Routes et Endpoints</h2>
                 </div>
                 <div class="card-content">
                     <div class="routes-grid">
                         <div class="route-category">
                             <h4><i class="fas fa-tachometer-alt"></i> Dashboard</h4>
                             <div class="route-list">
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/DashBoardView</span>
-                                    <span class="description">Interface principale avec alertes</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method post">POST</span>
-                                    <span class="path">/moveproduit</span>
-                                    <span class="description">Déplacement produits entre lieux</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method delete">DELETE</span>
-                                    <span class="path">/deleteproduitDash</span>
-                                    <span class="description">Suppression produit depuis dashboard</span>
-                                </div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/DashBoardView</span><span class="description" data-i18n="gs.route.dash.1">Interface principale avec alertes</span></div>
+                                <div class="route-item"><span class="method post">POST</span><span class="path">/moveproduit</span><span class="description" data-i18n="gs.route.dash.2">Déplacement produits entre lieux</span></div>
+                                <div class="route-item"><span class="method delete">DELETE</span><span class="path">/deleteproduitDash</span><span class="description" data-i18n="gs.route.dash.3">Suppression produit depuis dashboard</span></div>
                             </div>
                         </div>
-                        
                         <div class="route-category">
-                            <h4><i class="fas fa-boxes"></i> Produits</h4>
+                            <h4><i class="fas fa-boxes"></i> <span data-i18n="gs.route.products">Produits</span></h4>
                             <div class="route-list">
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/Ajoutproduits</span>
-                                    <span class="description">Formulaire ajout produit</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method post">POST</span>
-                                    <span class="path">/Ajoutproduits</span>
-                                    <span class="description">Création nouveau produit</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/VoirStock</span>
-                                    <span class="description">Visualisation stock complet</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method put">PUT</span>
-                                    <span class="path">/updateproduit</span>
-                                    <span class="description">Modification produit existant</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method delete">DELETE</span>
-                                    <span class="path">/deleteproduit</span>
-                                    <span class="description">Suppression produit</span>
-                                </div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/Ajoutproduits</span><span class="description" data-i18n="gs.route.prod.1">Formulaire ajout produit</span></div>
+                                <div class="route-item"><span class="method post">POST</span><span class="path">/Ajoutproduits</span><span class="description" data-i18n="gs.route.prod.2">Création nouveau produit</span></div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/VoirStock</span><span class="description" data-i18n="gs.route.prod.3">Visualisation stock complet</span></div>
+                                <div class="route-item"><span class="method put">PUT</span><span class="path">/updateproduit</span><span class="description" data-i18n="gs.route.prod.4">Modification produit existant</span></div>
+                                <div class="route-item"><span class="method delete">DELETE</span><span class="path">/deleteproduit</span><span class="description" data-i18n="gs.route.prod.5">Suppression produit</span></div>
                             </div>
                         </div>
-                        
                         <div class="route-category">
-                            <h4><i class="fas fa-map-marker-alt"></i> Lieux</h4>
+                            <h4><i class="fas fa-map-marker-alt"></i> <span data-i18n="gs.route.places">Lieux</span></h4>
                             <div class="route-list">
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/Ajoutlieux</span>
-                                    <span class="description">Formulaire ajout lieu</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method post">POST</span>
-                                    <span class="path">/Ajoutlieux</span>
-                                    <span class="description">Création nouveau lieu</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/Voirlieux</span>
-                                    <span class="description">Liste tous les lieux</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method put">PUT</span>
-                                    <span class="path">/updatelieu</span>
-                                    <span class="description">Modification lieu existant</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method delete">DELETE</span>
-                                    <span class="path">/deletelieu</span>
-                                    <span class="description">Suppression lieu</span>
-                                </div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/Ajoutlieux</span><span class="description" data-i18n="gs.route.lieu.1">Formulaire ajout lieu</span></div>
+                                <div class="route-item"><span class="method post">POST</span><span class="path">/Ajoutlieux</span><span class="description" data-i18n="gs.route.lieu.2">Création nouveau lieu</span></div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/Voirlieux</span><span class="description" data-i18n="gs.route.lieu.3">Liste tous les lieux</span></div>
+                                <div class="route-item"><span class="method put">PUT</span><span class="path">/updatelieu</span><span class="description" data-i18n="gs.route.lieu.4">Modification lieu existant</span></div>
+                                <div class="route-item"><span class="method delete">DELETE</span><span class="path">/deletelieu</span><span class="description" data-i18n="gs.route.lieu.5">Suppression lieu</span></div>
                             </div>
                         </div>
-                        
                         <div class="route-category">
-                            <h4><i class="fas fa-tags"></i> Catégories</h4>
+                            <h4><i class="fas fa-tags"></i> <span data-i18n="gs.route.categories">Catégories</span></h4>
                             <div class="route-list">
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/Ajoutcategories</span>
-                                    <span class="description">Formulaire ajout catégorie</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method post">POST</span>
-                                    <span class="path">/Ajoutcategories</span>
-                                    <span class="description">Création nouvelle catégorie</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method get">GET</span>
-                                    <span class="path">/voircategorie</span>
-                                    <span class="description">Liste toutes catégories</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method put">PUT</span>
-                                    <span class="path">/updatecategorie/{id}</span>
-                                    <span class="description">Modification catégorie</span>
-                                </div>
-                                <div class="route-item">
-                                    <span class="method delete">DELETE</span>
-                                    <span class="path">/deletecategorie/{id}</span>
-                                    <span class="description">Suppression catégorie</span>
-                                </div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/Ajoutcategories</span><span class="description" data-i18n="gs.route.cat.1">Formulaire ajout catégorie</span></div>
+                                <div class="route-item"><span class="method post">POST</span><span class="path">/Ajoutcategories</span><span class="description" data-i18n="gs.route.cat.2">Création nouvelle catégorie</span></div>
+                                <div class="route-item"><span class="method get">GET</span><span class="path">/voircategorie</span><span class="description" data-i18n="gs.route.cat.3">Liste toutes catégories</span></div>
+                                <div class="route-item"><span class="method put">PUT</span><span class="path">/updatecategorie/{id}</span><span class="description" data-i18n="gs.route.cat.4">Modification catégorie</span></div>
+                                <div class="route-item"><span class="method delete">DELETE</span><span class="path">/deletecategorie/{id}</span><span class="description" data-i18n="gs.route.cat.5">Suppression catégorie</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Résultats et Impact -->
+            <!-- Résultats -->
             <div class="content-card">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h2 class="section-title">Résultats et Impact</h2>
+                    <div class="section-icon"><i class="fas fa-chart-line"></i></div>
+                    <h2 class="section-title" data-i18n="sup.results.title">Résultats et Impact</h2>
                 </div>
                 <div class="card-content">
                     <div class="results-grid">
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-code"></i></div>
                             <div class="result-number">2500+</div>
-                            <div class="result-label">Lignes de Code</div>
+                            <div class="result-label" data-i18n="common.result.lines">Lignes de code</div>
                         </div>
-                        
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-database"></i></div>
                             <div class="result-number">5</div>
-                            <div class="result-label">Tables Créées</div>
+                            <div class="result-label" data-i18n="common.result.tables">Tables créées</div>
                         </div>
-                        
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-cogs"></i></div>
                             <div class="result-number">7</div>
-                            <div class="result-label">Contrôleurs</div>
+                            <div class="result-label" data-i18n="gs.result.controllers">Contrôleurs</div>
                         </div>
-                        
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-eye"></i></div>
                             <div class="result-number">15+</div>
-                            <div class="result-label">Routes API</div>
+                            <div class="result-label" data-i18n="gs.result.routes">Routes API</div>
                         </div>
                     </div>
-
                     <div class="project-impact">
-                        <h4>Impact et Apprentissages</h4>
-                        <p>Ce projet de gestion de stock représente une <strong>réalisation technique complète</strong> démontrant la maîtrise de l'écosystème Laravel et des bonnes pratiques de développement web moderne.</p>
-                        
+                        <h4 data-i18n="gs.impact.title">Impact et Apprentissages</h4>
+                        <p data-i18n="gs.impact.p1">Ce projet de gestion de stock représente une <strong>réalisation technique complète</strong> démontrant la maîtrise de l'écosystème Laravel et des bonnes pratiques de développement web moderne.</p>
                         <div class="benefits-list">
-                            <h5>Réalisations Techniques</h5>
+                            <h5 data-i18n="gs.impact.achievements">Réalisations Techniques</h5>
                             <ul>
-                                <li>Architecture MVC Laravel respectée et optimisée</li>
-                                <li>Base de données relationnelle avec contraintes d'intégrité</li>
-                                <li>Système d'alertes automatisé avec calculs dynamiques</li>
-                                <li>Traçabilité complète via logs fichiers datés</li>
-                                <li>Interface utilisateur responsive Bootstrap</li>
-                                <li>Authentification sécurisée avec middleware</li>
-                                <li>Relations Eloquent complexes (One-to-Many, Many-to-Many)</li>
+                                <li data-i18n="gs.impact.a1">Architecture MVC Laravel respectée et optimisée</li>
+                                <li data-i18n="gs.impact.a2">Base de données relationnelle avec contraintes d'intégrité</li>
+                                <li data-i18n="gs.impact.a3">Système d'alertes automatisé avec calculs dynamiques</li>
+                                <li data-i18n="gs.impact.a4">Traçabilité complète via logs fichiers datés</li>
+                                <li data-i18n="gs.impact.a5">Interface utilisateur responsive Bootstrap</li>
+                                <li data-i18n="gs.impact.a6">Authentification sécurisée avec middleware</li>
+                                <li data-i18n="gs.impact.a7">Relations Eloquent complexes (One-to-Many, Many-to-Many)</li>
                             </ul>
-                            
-                            <h5>Compétences Développées</h5>
+                            <h5 data-i18n="gs.impact.skills">Compétences Développées</h5>
                             <ul>
-                                <li>Maîtrise framework Laravel et écosystème PHP</li>
-                                <li>Conception et implémentation base de données MySQL</li>
-                                <li>Développement d'API RESTful avec routes Laravel</li>
-                                <li>Gestion des relations complexes avec Eloquent ORM</li>
-                                <li>Implémentation système d'authentification sécurisé</li>
-                                <li>Développement d'interfaces utilisateur modernes</li>
-                                <li>Méthodologie de développement MVC structurée</li>
+                                <li data-i18n="gs.impact.s1">Maîtrise framework Laravel et écosystème PHP</li>
+                                <li data-i18n="gs.impact.s2">Conception et implémentation base de données MySQL</li>
+                                <li data-i18n="gs.impact.s3">Développement d'API RESTful avec routes Laravel</li>
+                                <li data-i18n="gs.impact.s4">Gestion des relations complexes avec Eloquent ORM</li>
+                                <li data-i18n="gs.impact.s5">Implémentation système d'authentification sécurisé</li>
+                                <li data-i18n="gs.impact.s6">Développement d'interfaces utilisateur modernes</li>
+                                <li data-i18n="gs.impact.s7">Méthodologie de développement MVC structurée</li>
                             </ul>
-                            
-                            <h5>Fonctionnalités Innovantes</h5>
+                            <h5 data-i18n="gs.impact.innovations">Fonctionnalités Innovantes</h5>
                             <ul>
-                                <li>Gestion multi-sites avec lieu par défaut intelligent</li>
-                                <li>Suppression automatique des catégories vides</li>
-                                <li>Calcul automatique des quantités à commander</li>
-                                <li>Navigation par cartes interactives des lieux</li>
-                                <li>Système de logs avec fichiers texte structurés</li>
-                                <li>Interface dashboard avec alertes visuelles</li>
+                                <li data-i18n="gs.impact.i1">Gestion multi-sites avec lieu par défaut intelligent</li>
+                                <li data-i18n="gs.impact.i2">Suppression automatique des catégories vides</li>
+                                <li data-i18n="gs.impact.i3">Calcul automatique des quantités à commander</li>
+                                <li data-i18n="gs.impact.i4">Navigation par cartes interactives des lieux</li>
+                                <li data-i18n="gs.impact.i5">Système de logs avec fichiers texte structurés</li>
+                                <li data-i18n="gs.impact.i6">Interface dashboard avec alertes visuelles</li>
                             </ul>
                         </div>
                     </div>
@@ -661,47 +460,37 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-brand">
-                        <i class="fas fa-code"></i>
-                        Diego Petrachi
-                    </div>
-                    <p>Développeur passionné spécialisé en développement web moderne et solutions innovantes.</p>
+                    <div class="footer-brand"><i class="fas fa-code"></i> Diego Petrachi</div>
+                    <p data-i18n="gs.footer.desc">Développeur passionné spécialisé en développement web moderne et solutions innovantes.</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h3>Navigation</h3>
+                    <h3 data-i18n="footer.nav">Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="../../../index.html">Accueil</a></li>
-                        <li><a href="../../portfolio_moderne.html">Projets</a></li>
+                        <li><a href="../../../index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="../../portfolio_moderne.html" data-i18n="nav.projects">Projets</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="footer.contact">Contact</h3>
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> diegotar005@gmail.com</p>
                         <p><i class="fas fa-phone"></i> +33 7 83 12 59 88</p>
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Diego Petrachi. Tous droits réservés.</p>
+                <p data-i18n="footer.copy">&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
     <script src="GestionStock_moderne.js"></script>
+    <script src="../../../i18n.js"></script>
 </body>
 </html>
-

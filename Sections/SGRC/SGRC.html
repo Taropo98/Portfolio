@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="SGRC_moderne.css">
 </head>
 <body>
-    <!-- Navigation moderne -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
@@ -17,58 +16,54 @@
                 <span>Diego Petrachi</span>
             </div>
             <div class="nav-menu">
-                <a href="ManusPort/index.html" class="nav-link">
+                <a href="../../index.html" class="nav-link">
                     <i class="fas fa-home"></i>
                     <span data-i18n="nav.home">Accueil</span>
                 </a>
-                <a href="ManusPort/Sections/portfolio_moderne.html" class="nav-link">
+                <a href="../portfolio_moderne.html" class="nav-link">
                     <i class="fas fa-folder-open"></i>
-                    <span data-i18n="nav.projects">Portfolio</span>
+                    <span data-i18n="nav.projects">Projets</span>
                 </a>
             </div>
             <button id="lang-toggle" class="lang-toggle-btn" title="Switch to English">
                 <span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span>
             </button>
             <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
     <div class="breadcrumb-section">
         <div class="breadcrumb-container">
             <nav class="breadcrumb">
-                <a href="ManusPort/index.html">Accueil</a>
+                <a href="../../index.html" data-i18n="nav.home">Accueil</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="ManusPort/Sections/portfolio_moderne.html">Portfolio</a>
+                <a href="../portfolio_moderne.html" data-i18n="nav.projects">Projets</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>SGRC - Système Restaurant</span>
+                <span data-i18n="sgrc.breadcrumb">SGRC - Système Restaurant</span>
             </nav>
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>Projet BTS SIO</span>
+                    <span data-i18n="sgrc.badge">Projet BTS SIO</span>
                 </div>
                 <h1 class="hero-title">
                     <span class="gradient-text">SGRC</span>
-                    Restaurant
+                    <span data-i18n="sgrc.title.sub">Restaurant</span>
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-i18n="sgrc.subtitle">
                     Système de Gestion Restaurant Collaboratif - Digitalisation complète du workflow de restauration
                 </p>
                 <div class="hero-badges">
                     <div class="info-badge">
                         <i class="fas fa-calendar"></i>
-                        <span>Projet scolaire</span>
+                        <span data-i18n="sgrc.badge.school">Projet scolaire</span>
                     </div>
                     <div class="info-badge">
                         <i class="fas fa-code"></i>
@@ -76,7 +71,7 @@
                     </div>
                     <div class="info-badge">
                         <i class="fas fa-users"></i>
-                        <span>Multi-utilisateurs</span>
+                        <span data-i18n="sgrc.badge.multi">Multi-utilisateurs</span>
                     </div>
                 </div>
             </div>
@@ -88,44 +83,32 @@
                     </div>
                 </div>
                 <div class="floating-elements">
-                    <div class="floating-element element-1">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <div class="floating-element element-2">
-                        <i class="fas fa-cash-register"></i>
-                    </div>
-                    <div class="floating-element element-3">
-                        <i class="fas fa-chef-hat"></i>
-                    </div>
-                    <div class="floating-element element-4">
-                        <i class="fas fa-wine-glass"></i>
-                    </div>
+                    <div class="floating-element element-1"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="floating-element element-2"><i class="fas fa-cash-register"></i></div>
+                    <div class="floating-element element-3"><i class="fas fa-chef-hat"></i></div>
+                    <div class="floating-element element-4"><i class="fas fa-wine-glass"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contenu Principal -->
     <section class="main-content">
         <div class="content-container">
-            
+
             <!-- Contexte -->
             <div class="content-card" data-aos="fade-up">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-info-circle"></i>
-                    </div>
-                    <h2 class="section-title">Contexte du Projet</h2>
+                    <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                    <h2 class="section-title" data-i18n="sgrc.context.title">Contexte du Projet</h2>
                 </div>
                 <div class="card-content">
-                    <p><strong>SGRC</strong> est un projet web développé dans un contexte scolaire, au sein d'un lycée, visant à digitaliser la prise et la gestion des commandes dans un service de restauration.</p>
-                    <p>Le système implique plusieurs profils utilisateurs (service, caisse, cuisine, bar, admin) et permet une gestion collaborative et efficace de l'ensemble du processus de restauration.</p>
-                    
+                    <p data-i18n="sgrc.context.p1"><strong>SGRC</strong> est un projet web développé dans un contexte scolaire, au sein d'un lycée, visant à digitaliser la prise et la gestion des commandes dans un service de restauration.</p>
+                    <p data-i18n="sgrc.context.p2">Le système implique plusieurs profils utilisateurs (service, caisse, cuisine, bar, admin) et permet une gestion collaborative et efficace de l'ensemble du processus de restauration.</p>
                     <div class="highlight-box">
                         <i class="fas fa-target"></i>
                         <div>
-                            <h4>Objectif Principal</h4>
-                            <p>Moderniser et digitaliser le workflow de restauration en créant une solution web collaborative permettant une meilleure coordination entre les équipes.</p>
+                            <h4 data-i18n="sgrc.context.highlight.title">Objectif Principal</h4>
+                            <p data-i18n="sgrc.context.highlight.text">Moderniser et digitaliser le workflow de restauration en créant une solution web collaborative permettant une meilleure coordination entre les équipes.</p>
                         </div>
                     </div>
                 </div>
@@ -134,15 +117,13 @@
             <!-- Technologies -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h2 class="section-title">Technologies Utilisées</h2>
+                    <div class="section-icon"><i class="fas fa-cogs"></i></div>
+                    <h2 class="section-title" data-i18n="common.tech.title">Technologies Utilisées</h2>
                 </div>
                 <div class="card-content">
                     <div class="tech-stack">
                         <div class="tech-category">
-                            <h4><i class="fas fa-laptop-code"></i> Frontend</h4>
+                            <h4><i class="fas fa-laptop-code"></i> <span data-i18n="common.tech.frontend">Frontend</span></h4>
                             <div class="tech-badges">
                                 <span class="tech-badge primary">HTML5</span>
                                 <span class="tech-badge primary">CSS3</span>
@@ -150,9 +131,8 @@
                                 <span class="tech-badge primary">Bootstrap</span>
                             </div>
                         </div>
-                        
                         <div class="tech-category">
-                            <h4><i class="fas fa-server"></i> Backend</h4>
+                            <h4><i class="fas fa-server"></i> <span data-i18n="common.tech.backend">Backend</span></h4>
                             <div class="tech-badges">
                                 <span class="tech-badge secondary">PHP</span>
                                 <span class="tech-badge secondary">MySQL</span>
@@ -160,9 +140,8 @@
                                 <span class="tech-badge secondary">XAMPP</span>
                             </div>
                         </div>
-                        
                         <div class="tech-category">
-                            <h4><i class="fas fa-tools"></i> Outils</h4>
+                            <h4><i class="fas fa-tools"></i> <span data-i18n="common.tech.tools">Outils</span></h4>
                             <div class="tech-badges">
                                 <span class="tech-badge accent">VS Code</span>
                                 <span class="tech-badge accent">phpMyAdmin</span>
@@ -176,71 +155,55 @@
             <!-- Profils Utilisateurs -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h2 class="section-title">Profils Utilisateurs</h2>
+                    <div class="section-icon"><i class="fas fa-users"></i></div>
+                    <h2 class="section-title" data-i18n="sgrc.users.title">Profils Utilisateurs</h2>
                 </div>
                 <div class="card-content">
                     <div class="users-grid">
                         <div class="user-profile">
-                            <div class="profile-icon">
-                                <i class="fas fa-clipboard-list"></i>
-                            </div>
-                            <h4>Service</h4>
-                            <p>Prise de commandes, gestion des tables, communication avec la cuisine</p>
+                            <div class="profile-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <h4 data-i18n="sgrc.user.service">Service</h4>
+                            <p data-i18n="sgrc.user.service.desc">Prise de commandes, gestion des tables, communication avec la cuisine</p>
                             <div class="profile-features">
-                                <span class="feature-tag">Commandes</span>
-                                <span class="feature-tag">Tables</span>
-                                <span class="feature-tag">Suivi</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.service.t1">Commandes</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.service.t2">Tables</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.service.t3">Suivi</span>
                             </div>
                         </div>
-                        
                         <div class="user-profile">
-                            <div class="profile-icon">
-                                <i class="fas fa-cash-register"></i>
-                            </div>
-                            <h4>Caisse</h4>
-                            <p>Gestion des paiements, facturation, encaissements</p>
+                            <div class="profile-icon"><i class="fas fa-cash-register"></i></div>
+                            <h4 data-i18n="sgrc.user.caisse">Caisse</h4>
+                            <p data-i18n="sgrc.user.caisse.desc">Gestion des paiements, facturation, encaissements</p>
                             <div class="profile-features">
-                                <span class="feature-tag">Paiements</span>
-                                <span class="feature-tag">Factures</span>
-                                <span class="feature-tag">Rapports</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.caisse.t1">Paiements</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.caisse.t2">Factures</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.caisse.t3">Rapports</span>
                             </div>
                         </div>
-                        
                         <div class="user-profile">
-                            <div class="profile-icon">
-                                <i class="fas fa-chef-hat"></i>
-                            </div>
-                            <h4>Cuisine</h4>
-                            <p>Réception des commandes, gestion de la préparation, statuts des plats</p>
+                            <div class="profile-icon"><i class="fas fa-chef-hat"></i></div>
+                            <h4 data-i18n="sgrc.user.cuisine">Cuisine</h4>
+                            <p data-i18n="sgrc.user.cuisine.desc">Réception des commandes, gestion de la préparation, statuts des plats</p>
                             <div class="profile-features">
-                                <span class="feature-tag">Préparation</span>
-                                <span class="feature-tag">Timing</span>
-                                <span class="feature-tag">Statuts</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.cuisine.t1">Préparation</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.cuisine.t2">Timing</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.cuisine.t3">Statuts</span>
                             </div>
                         </div>
-                        
                         <div class="user-profile">
-                            <div class="profile-icon">
-                                <i class="fas fa-wine-glass"></i>
-                            </div>
-                            <h4>Bar</h4>
-                            <p>Gestion des boissons, cocktails, service des apéritifs</p>
+                            <div class="profile-icon"><i class="fas fa-wine-glass"></i></div>
+                            <h4 data-i18n="sgrc.user.bar">Bar</h4>
+                            <p data-i18n="sgrc.user.bar.desc">Gestion des boissons, cocktails, service des apéritifs</p>
                             <div class="profile-features">
-                                <span class="feature-tag">Boissons</span>
-                                <span class="feature-tag">Cocktails</span>
-                                <span class="feature-tag">Service</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.bar.t1">Boissons</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.bar.t2">Cocktails</span>
+                                <span class="feature-tag" data-i18n="sgrc.user.bar.t3">Service</span>
                             </div>
                         </div>
-                        
                         <div class="user-profile">
-                            <div class="profile-icon">
-                                <i class="fas fa-user-shield"></i>
-                            </div>
+                            <div class="profile-icon"><i class="fas fa-user-shield"></i></div>
                             <h4>Admin</h4>
-                            <p>Configuration système, gestion des utilisateurs, supervision générale</p>
+                            <p data-i18n="sgrc.user.admin.desc">Configuration système, gestion des utilisateurs, supervision générale</p>
                             <div class="profile-features">
                                 <span class="feature-tag">Config</span>
                                 <span class="feature-tag">Users</span>
@@ -254,42 +217,37 @@
             <!-- Workflow -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h2 class="section-title">Workflow de Restauration</h2>
+                    <div class="section-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h2 class="section-title" data-i18n="sgrc.workflow.title">Workflow de Restauration</h2>
                 </div>
                 <div class="card-content">
                     <div class="workflow-steps">
                         <div class="workflow-step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4><i class="fas fa-clipboard-list"></i> Prise de Commande</h4>
-                                <p>Le serveur prend la commande via l'interface service et l'envoie directement en cuisine et au bar</p>
+                                <h4><i class="fas fa-clipboard-list"></i> <span data-i18n="sgrc.workflow.step1.title">Prise de Commande</span></h4>
+                                <p data-i18n="sgrc.workflow.step1.desc">Le serveur prend la commande via l'interface service et l'envoie directement en cuisine et au bar</p>
                             </div>
                         </div>
-                        
                         <div class="workflow-step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4><i class="fas fa-chef-hat"></i> Préparation</h4>
-                                <p>La cuisine et le bar reçoivent les commandes et mettent à jour les statuts de préparation</p>
+                                <h4><i class="fas fa-chef-hat"></i> <span data-i18n="sgrc.workflow.step2.title">Préparation</span></h4>
+                                <p data-i18n="sgrc.workflow.step2.desc">La cuisine et le bar reçoivent les commandes et mettent à jour les statuts de préparation</p>
                             </div>
                         </div>
-                        
                         <div class="workflow-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4><i class="fas fa-bell"></i> Notification</h4>
-                                <p>Le service est notifié quand les plats sont prêts pour le service</p>
+                                <h4><i class="fas fa-bell"></i> <span data-i18n="sgrc.workflow.step3.title">Notification</span></h4>
+                                <p data-i18n="sgrc.workflow.step3.desc">Le service est notifié quand les plats sont prêts pour le service</p>
                             </div>
                         </div>
-                        
                         <div class="workflow-step">
                             <div class="step-number">4</div>
                             <div class="step-content">
-                                <h4><i class="fas fa-cash-register"></i> Encaissement</h4>
-                                <p>La caisse gère la facturation et les paiements une fois le service terminé</p>
+                                <h4><i class="fas fa-cash-register"></i> <span data-i18n="sgrc.workflow.step4.title">Encaissement</span></h4>
+                                <p data-i18n="sgrc.workflow.step4.desc">La caisse gère la facturation et les paiements une fois le service terminé</p>
                             </div>
                         </div>
                     </div>
@@ -299,196 +257,125 @@
             <!-- Fonctionnalités -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-list-check"></i>
-                    </div>
-                    <h2 class="section-title">Fonctionnalités Développées</h2>
+                    <div class="section-icon"><i class="fas fa-list-check"></i></div>
+                    <h2 class="section-title" data-i18n="common.features.title">Fonctionnalités Développées</h2>
                 </div>
                 <div class="card-content">
                     <div class="features-sections">
                         <div class="feature-section">
-                            <h4><i class="fas fa-clipboard-list"></i> Interface Service</h4>
+                            <h4><i class="fas fa-clipboard-list"></i> <span data-i18n="sgrc.feat.service">Interface Service</span></h4>
                             <div class="features-list">
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Prise de commande intuitive</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Gestion des tables et plans de salle</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Suivi en temps réel des commandes</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Communication directe avec la cuisine</span>
-                                </div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.service.1">Prise de commande intuitive</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.service.2">Gestion des tables et plans de salle</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.service.3">Suivi en temps réel des commandes</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.service.4">Communication directe avec la cuisine</span></div>
                             </div>
                         </div>
-                        
                         <div class="feature-section">
-                            <h4><i class="fas fa-chef-hat"></i> Interface Cuisine</h4>
+                            <h4><i class="fas fa-chef-hat"></i> <span data-i18n="sgrc.feat.kitchen">Interface Cuisine</span></h4>
                             <div class="features-list">
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Réception automatique des commandes</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Gestion des priorités et timing</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Mise à jour des statuts de préparation</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Notifications de service</span>
-                                </div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.kitchen.1">Réception automatique des commandes</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.kitchen.2">Gestion des priorités et timing</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.kitchen.3">Mise à jour des statuts de préparation</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.kitchen.4">Notifications de service</span></div>
                             </div>
                         </div>
-                        
                         <div class="feature-section">
-                            <h4><i class="fas fa-cash-register"></i> Interface Caisse</h4>
+                            <h4><i class="fas fa-cash-register"></i> <span data-i18n="sgrc.feat.cashier">Interface Caisse</span></h4>
                             <div class="features-list">
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Facturation automatique</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Gestion des modes de paiement</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Rapports de vente quotidiens</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Suivi des encaissements</span>
-                                </div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.cashier.1">Facturation automatique</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.cashier.2">Gestion des modes de paiement</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.cashier.3">Rapports de vente quotidiens</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.cashier.4">Suivi des encaissements</span></div>
                             </div>
                         </div>
-                        
                         <div class="feature-section">
-                            <h4><i class="fas fa-user-shield"></i> Interface Admin</h4>
+                            <h4><i class="fas fa-user-shield"></i> <span data-i18n="sgrc.feat.admin">Interface Admin</span></h4>
                             <div class="features-list">
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Gestion des utilisateurs et droits</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Configuration du menu et prix</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Statistiques et analytics</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="fas fa-check"></i>
-                                    <span>Sauvegarde et maintenance</span>
-                                </div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.admin.1">Gestion des utilisateurs et droits</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.admin.2">Configuration du menu et prix</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.admin.3">Statistiques et analytics</span></div>
+                                <div class="feature"><i class="fas fa-check"></i><span data-i18n="sgrc.feat.admin.4">Sauvegarde et maintenance</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Améliorations Apportées -->
+            <!-- Améliorations -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h2 class="section-title">Améliorations Apportées</h2>
+                    <div class="section-icon"><i class="fas fa-rocket"></i></div>
+                    <h2 class="section-title" data-i18n="sgrc.improvements.title">Améliorations Apportées</h2>
                 </div>
                 <div class="card-content">
                     <div class="improvements-grid">
                         <div class="improvement-item">
-                            <div class="improvement-icon">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <h4>Actualisation Optimisée</h4>
-                            <p>Correction de l'actualisation automatique de la page pour améliorer l'expérience utilisateur et réduire la charge serveur</p>
+                            <div class="improvement-icon"><i class="fas fa-sync-alt"></i></div>
+                            <h4 data-i18n="sgrc.improv.refresh.title">Actualisation Optimisée</h4>
+                            <p data-i18n="sgrc.improv.refresh.desc">Correction de l'actualisation automatique de la page pour améliorer l'expérience utilisateur et réduire la charge serveur</p>
                         </div>
-                        
                         <div class="improvement-item">
-                            <div class="improvement-icon">
-                                <i class="fas fa-undo"></i>
-                            </div>
-                            <h4>Navigation Améliorée</h4>
-                            <p>Ajout de la possibilité de revenir en arrière sur l'étape du dressage avec un bouton dédié</p>
+                            <div class="improvement-icon"><i class="fas fa-undo"></i></div>
+                            <h4 data-i18n="sgrc.improv.nav.title">Navigation Améliorée</h4>
+                            <p data-i18n="sgrc.improv.nav.desc">Ajout de la possibilité de revenir en arrière sur l'étape du dressage avec un bouton dédié</p>
                         </div>
-                        
                         <div class="improvement-item">
-                            <div class="improvement-icon">
-                                <i class="fas fa-align-center"></i>
-                            </div>
-                            <h4>Interface Alignée</h4>
-                            <p>Alignement des titres avec les champs sur l'interface du service pour une meilleure lisibilité</p>
+                            <div class="improvement-icon"><i class="fas fa-align-center"></i></div>
+                            <h4 data-i18n="sgrc.improv.ui.title">Interface Alignée</h4>
+                            <p data-i18n="sgrc.improv.ui.desc">Alignement des titres avec les champs sur l'interface du service pour une meilleure lisibilité</p>
                         </div>
-                        
                         <div class="improvement-item">
-                            <div class="improvement-icon">
-                                <i class="fas fa-tachometer-alt"></i>
-                            </div>
-                            <h4>Performance</h4>
-                            <p>Optimisation des requêtes et amélioration des temps de réponse du système</p>
+                            <div class="improvement-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h4 data-i18n="sgrc.improv.perf.title">Performance</h4>
+                            <p data-i18n="sgrc.improv.perf.desc">Optimisation des requêtes et amélioration des temps de réponse du système</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Compétences Acquises -->
+            <!-- Compétences -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="600">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h2 class="section-title">Compétences Acquises</h2>
+                    <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2 class="section-title" data-i18n="common.skills.title">Compétences Acquises</h2>
                 </div>
                 <div class="card-content">
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <h4><i class="fas fa-laptop-code"></i> Développement Web</h4>
+                            <h4><i class="fas fa-laptop-code"></i> <span data-i18n="sgrc.skill.web">Développement Web</span></h4>
                             <ul>
-                                <li>Développement full-stack PHP/MySQL</li>
-                                <li>Interfaces utilisateur responsives</li>
-                                <li>Gestion des sessions et authentification</li>
-                                <li>AJAX et communication asynchrone</li>
+                                <li data-i18n="sgrc.skill.web.1">Développement full-stack PHP/MySQL</li>
+                                <li data-i18n="sgrc.skill.web.2">Interfaces utilisateur responsives</li>
+                                <li data-i18n="sgrc.skill.web.3">Gestion des sessions et authentification</li>
+                                <li data-i18n="sgrc.skill.web.4">AJAX et communication asynchrone</li>
                             </ul>
                         </div>
-                        
                         <div class="skill-category">
-                            <h4><i class="fas fa-database"></i> Base de Données</h4>
+                            <h4><i class="fas fa-database"></i> <span data-i18n="sgrc.skill.db">Base de Données</span></h4>
                             <ul>
-                                <li>Conception de schémas relationnels</li>
-                                <li>Optimisation des requêtes SQL</li>
-                                <li>Gestion des transactions</li>
-                                <li>Sécurité et intégrité des données</li>
+                                <li data-i18n="sgrc.skill.db.1">Conception de schémas relationnels</li>
+                                <li data-i18n="sgrc.skill.db.2">Optimisation des requêtes SQL</li>
+                                <li data-i18n="sgrc.skill.db.3">Gestion des transactions</li>
+                                <li data-i18n="sgrc.skill.db.4">Sécurité et intégrité des données</li>
                             </ul>
                         </div>
-                        
                         <div class="skill-category">
-                            <h4><i class="fas fa-users"></i> Gestion Multi-utilisateurs</h4>
+                            <h4><i class="fas fa-users"></i> <span data-i18n="sgrc.skill.multi">Gestion Multi-utilisateurs</span></h4>
                             <ul>
-                                <li>Système de rôles et permissions</li>
-                                <li>Workflow collaboratif</li>
-                                <li>Communication inter-services</li>
-                                <li>Gestion des conflits d'accès</li>
+                                <li data-i18n="sgrc.skill.multi.1">Système de rôles et permissions</li>
+                                <li data-i18n="sgrc.skill.multi.2">Workflow collaboratif</li>
+                                <li data-i18n="sgrc.skill.multi.3">Communication inter-services</li>
+                                <li data-i18n="sgrc.skill.multi.4">Gestion des conflits d'accès</li>
                             </ul>
                         </div>
-                        
                         <div class="skill-category">
-                            <h4><i class="fas fa-project-diagram"></i> Analyse Métier</h4>
+                            <h4><i class="fas fa-project-diagram"></i> <span data-i18n="sgrc.skill.business">Analyse Métier</span></h4>
                             <ul>
-                                <li>Analyse des processus métier</li>
-                                <li>Modélisation des workflows</li>
-                                <li>Optimisation des procédures</li>
-                                <li>Tests utilisateur et feedback</li>
+                                <li data-i18n="sgrc.skill.business.1">Analyse des processus métier</li>
+                                <li data-i18n="sgrc.skill.business.2">Modélisation des workflows</li>
+                                <li data-i18n="sgrc.skill.business.3">Optimisation des procédures</li>
+                                <li data-i18n="sgrc.skill.business.4">Tests utilisateur et feedback</li>
                             </ul>
                         </div>
                     </div>
@@ -498,50 +385,36 @@
             <!-- Résultats -->
             <div class="content-card" data-aos="fade-up" data-aos-delay="700">
                 <div class="card-header">
-                    <div class="section-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h2 class="section-title">Résultats et Impact</h2>
+                    <div class="section-icon"><i class="fas fa-chart-line"></i></div>
+                    <h2 class="section-title" data-i18n="common.results.title">Résultats et Impact</h2>
                 </div>
                 <div class="card-content">
                     <div class="results-grid">
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-users"></i></div>
                             <div class="result-number">5</div>
-                            <div class="result-label">Profils utilisateurs</div>
+                            <div class="result-label" data-i18n="sgrc.result.users">Profils utilisateurs</div>
                         </div>
-                        
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-window-maximize"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-window-maximize"></i></div>
                             <div class="result-number">15+</div>
-                            <div class="result-label">Interfaces développées</div>
+                            <div class="result-label" data-i18n="sgrc.result.interfaces">Interfaces développées</div>
                         </div>
-                        
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-database"></i></div>
                             <div class="result-number">12</div>
-                            <div class="result-label">Tables de données</div>
+                            <div class="result-label" data-i18n="common.result.tables">Tables de données</div>
                         </div>
-                        
                         <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
+                            <div class="result-icon"><i class="fas fa-clock"></i></div>
                             <div class="result-number">60%</div>
-                            <div class="result-label">Gain de temps</div>
+                            <div class="result-label" data-i18n="sgrc.result.time">Gain de temps</div>
                         </div>
                     </div>
-                    
                     <div class="project-impact">
-                        <h4>Impact du Projet</h4>
-                        <p>Le système SGRC a permis de digitaliser complètement le processus de restauration, améliorant significativement la coordination entre les équipes et réduisant les erreurs de commande.</p>
-                        <p>L'interface collaborative a facilité la communication entre le service, la cuisine, le bar et la caisse, créant un workflow fluide et efficace pour l'ensemble du restaurant.</p>
+                        <h4 data-i18n="common.impact.title">Impact du Projet</h4>
+                        <p data-i18n="sgrc.impact.p1">Le système SGRC a permis de digitaliser complètement le processus de restauration, améliorant significativement la coordination entre les équipes et réduisant les erreurs de commande.</p>
+                        <p data-i18n="sgrc.impact.p2">L'interface collaborative a facilité la communication entre le service, la cuisine, le bar et la caisse, créant un workflow fluide et efficace pour l'ensemble du restaurant.</p>
                     </div>
                 </div>
             </div>
@@ -549,46 +422,35 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-brand">
-                        <i class="fas fa-code"></i>
-                        <span>Diego Petrachi</span>
-                    </div>
-                    <p>SGRC - Système de Gestion Restaurant Collaboratif développé pour digitaliser le workflow de restauration</p>
+                    <div class="footer-brand"><i class="fas fa-code"></i><span>Diego Petrachi</span></div>
+                    <p data-i18n="sgrc.footer.desc">SGRC - Système de Gestion Restaurant Collaboratif développé pour digitaliser le workflow de restauration</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h3>Navigation</h3>
+                    <h3 data-i18n="footer.nav">Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="ManusPort/index.html">Accueil</a></li>
-                        <li><a href="ManusPort/Sections/portfolio_moderne.html">Portfolio</a></li>
-                        <li><a href="#hero">Retour en haut</a></li>
+                        <li><a href="../../index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="../portfolio_moderne.html" data-i18n="nav.projects">Projets</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="footer.contact">Contact</h3>
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> diegotar005@gmail.com</p>
                         <p><i class="fas fa-phone"></i> +33 7 83 12 59 88</p>
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
+                <p data-i18n="footer.copy">&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bouton retour en haut -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
     <script src="SGRC_moderne.js"></script>
     <script src="../../i18n.js"></script>
