@@ -969,6 +969,8 @@ const translations = {
     "gs.impact.i5": "Système de logs avec fichiers texte structurés",
     "gs.impact.i6": "Interface dashboard avec alertes visuelles",
     "gs.footer.desc": "Développeur passionné spécialisé en développement web moderne et solutions innovantes.",
+    "portfolio.footer.project19Title": "SGRC - Système de Gestion Restaurant Collaboratif",
+    "portfolio.footer.project19Desc": "Application PHP pour la gestion de restaurants, avec interface d'administration et authentification.",
   },
 
   en: {
@@ -1936,6 +1938,8 @@ const translations = {
     "gs.impact.i5": "Logging system with structured text files",
     "gs.impact.i6": "Dashboard interface with visual alerts",
     "gs.footer.desc": "Passionate developer specializing in modern web development and innovative solutions.",
+    "portfolio.footer.project19Title": "SGRC - Restaurant Management System",
+    "portfolio.footer.project19Desc": "A collaborative restaurant management system with a smart dashboard, secure authentication, and advanced features.",
     }
 };
 
