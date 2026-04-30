@@ -1330,6 +1330,8 @@ html {
     transition: var(--transition);
     background: var(--gray-100);
     cursor: pointer;
+    overflow: hidden;
+    min-width: 0;
 }
 
 .competence-item:hover {
@@ -1369,13 +1371,19 @@ html {
     font-weight: 600;
     color: var(--gray-800);
     flex-shrink: 0;
-    min-width: 80px;
+    min-width: 70px;
+    max-width: 90px;
 }
 
 .competence-projects {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: var(--gray-500);
     line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
 }
 
 /* ===== BOUTON CV FOOTER ===== */
@@ -1492,3 +1500,25 @@ html {
 .competence-item:hover::after {
     opacity: 1;
 }
+
+/* ===== Bouton langue i18n ===== */
+.lang-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgb(0, 0, 0);
+    border-radius: 2rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+.lang-toggle-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+.lang-flag { font-size: 1rem; }

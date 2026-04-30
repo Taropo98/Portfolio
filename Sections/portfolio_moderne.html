@@ -176,15 +176,18 @@
             </div>
             <div class="nav-menu">
                 <a href="../index.html" class="nav-link">
-                    <i class="fas fa-home"></i> Accueil
+                    <i class="fas fa-home"></i> <span data-i18n="nav.home">Accueil</span>
                 </a>
                 <a href="#projets" class="nav-link active">
-                    <i class="fas fa-folder-open"></i> Projets
+                    <i class="fas fa-folder-open"></i> <span data-i18n="nav.projects">Projets</span>
                 </a>
                 <a href="../CV_Diego_Petrachi.pdf" class="nav-link nav-link-cv" download>
-                    <i class="fas fa-file-download"></i> Mon CV
+                    <i class="fas fa-file-download"></i> <span data-i18n="nav.cv">Mon CV</span>
                 </a>
             </div>
+            <button id="lang-toggle" class="lang-toggle-btn" title="Switch to English">
+                <span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span>
+            </button>
             <div class="nav-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -196,20 +199,18 @@
         <div class="hero-container">
             <div class="hero-content">
                 <a href="../index.html" class="back-btn">
-                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                    <i class="fas fa-arrow-left"></i> <span data-i18n="portfolio.back">Retour à l'accueil</span>
                 </a>
                 <h1 class="hero-title">
-                    <span class="gradient-text">Tous mes</span>
-                    <span class="typewriter">Projets</span>
+                    <span class="gradient-text" data-i18n="portfolio.subtitle1">Tous mes</span>
+                    <span class="typewriter" data-i18n="portfolio.subtitle2">Projets</span>
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-i18n="portfolio.description">
                     Des stages professionnels aux créations personnelles — explorez l'ensemble de mon travail
                 </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="18">0</span>
-                        <span class="stat-label">Projets</span>
-                    </div>
+                <div class="hero-stat-box">
+                    <span class="hero-stat-number" id="totalCount">18</span>
+                    <span class="hero-stat-label" data-i18n="portfolio.results">projets au total</span>
                 </div>
             </div>
             <div class="hero-visual">
@@ -230,31 +231,31 @@
             <!-- Filtres -->
             <div class="filters-section">
                 <div class="filters-header">
-                    <h2>Explorez mes projets</h2>
+                    <h2 data-i18n="portfolio.filtersTitle">Explorez mes projets</h2>
                 </div>
                 <div class="filters-controls">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Rechercher un projet..." id="searchInput">
+                        <input type="text" placeholder="Rechercher un projet..." id="searchInput" data-i18n-placeholder="portfolio.search">
                     </div>
                     <div class="filter-groups">
                         <div class="filter-group">
-                            <label>Catégorie</label>
+                            <label data-i18n="portfolio.filter.all">Catégorie</label>
                             <div class="filter-buttons primary-filters">
                                 <button class="filter-btn active" data-filter="all">
-                                    Tous <span class="badge" id="count-all">18</span>
+                                    <span data-i18n="portfolio.filter.all">Tous</span> <span class="badge" id="count-all">18</span>
                                 </button>
                                 <button class="filter-btn" data-filter="stage">
-                                    <i class="fas fa-briefcase"></i> Stages <span class="badge" id="count-stage">2</span>
+                                    <i class="fas fa-briefcase"></i> <span data-i18n="portfolio.filter.stages">Stages</span> <span class="badge" id="count-stage">2</span>
                                 </button>
                                 <button class="filter-btn" data-filter="bts">
-                                    <i class="fas fa-graduation-cap"></i> BTS SIO <span class="badge" id="count-bts">3</span>
+                                    <i class="fas fa-graduation-cap"></i> <span data-i18n="portfolio.filter.bts">BTS SIO</span> <span class="badge" id="count-bts">3</span>
                                 </button>
                                 <button class="filter-btn" data-filter="personnel">
-                                    <i class="fas fa-star"></i> Personnel <span class="badge" id="count-personnel">8</span>
+                                    <i class="fas fa-star"></i> <span data-i18n="portfolio.filter.personnel">Personnel</span> <span class="badge" id="count-personnel">8</span>
                                 </button>
                                 <button class="filter-btn" data-filter="outils">
-                                    <i class="fas fa-robot"></i> Outils IA <span class="badge" id="count-outils">5</span>
+                                    <i class="fas fa-robot"></i> <span data-i18n="portfolio.filter.ia">Outils IA</span> <span class="badge" id="count-outils">5</span>
                                 </button>
                             </div>
                         </div>
@@ -262,61 +263,61 @@
                             <label>Domaine</label>
                             <div class="filter-buttons secondary-filters">
                                 <button class="filter-btn" data-filter="tech">
-                                    <i class="fas fa-laptop-code"></i> Tech
+                                    <i class="fas fa-laptop-code"></i> <span data-i18n="portfolio.filter.tech">Tech</span>
                                 </button>
                                 <button class="filter-btn" data-filter="web">
-                                    <i class="fas fa-globe"></i> Web
+                                    <i class="fas fa-globe"></i> <span data-i18n="portfolio.filter.web">Web</span>
                                 </button>
                                 <button class="filter-btn" data-filter="ia">
-                                    <i class="fas fa-brain"></i> IA
+                                    <i class="fas fa-brain"></i> <span data-i18n="portfolio.filter.ia">IA</span>
                                 </button>
                                 <button class="filter-btn" data-filter="video">
-                                    <i class="fas fa-video"></i> Vidéo
+                                    <i class="fas fa-video"></i> <span data-i18n="portfolio.filter.video">Vidéo</span>
                                 </button>
                                 <button class="filter-btn" data-filter="jeux">
-                                    <i class="fas fa-gamepad"></i> Jeux
+                                    <i class="fas fa-gamepad"></i> <span data-i18n="portfolio.filter.jeux">Jeux</span>
                                 </button>
                                 <button class="filter-btn" data-filter="creative">
-                                    <i class="fas fa-palette"></i> Créatif
+                                    <i class="fas fa-palette"></i> <span data-i18n="portfolio.filter.creatif">Créatif</span>
                                 </button>
                             </div>
                         </div>
 
                         <div class="filter-group">
-                            <label>Langage</label>
+                            <label data-i18n="portfolio.filter.lang.title">Langage</label>
                             <div class="filter-buttons secondary-filters">
                                 <button class="filter-btn" data-filter="lang-python">
-                                    <i class="fab fa-python"></i> Python
+                                    <i class="fab fa-python"></i> <span data-i18n="portfolio.filter.python">Python</span>
                                 </button>
                                 <button class="filter-btn" data-filter="lang-js">
-                                    <i class="fab fa-js-square"></i> JavaScript
+                                    <i class="fab fa-js-square"></i> <span data-i18n="portfolio.filter.javascript">JavaScript</span>
                                 </button>
                                 <button class="filter-btn" data-filter="lang-nodejs">
-                                    <i class="fab fa-node-js"></i> Node.js
+                                    <i class="fab fa-node-js"></i> <span data-i18n="portfolio.filter.nodejs">Node.js</span>
                                 </button>
                                 <button class="filter-btn" data-filter="lang-php">
-                                    <i class="fab fa-php"></i> PHP
+                                    <i class="fab fa-php"></i> <span data-i18n="portfolio.filter.php">PHP</span>
                                 </button>
                                 <button class="filter-btn" data-filter="lang-csharp">
-                                    <i class="fas fa-hashtag"></i> C#
+                                    <i class="fas fa-hashtag"></i> <span data-i18n="portfolio.filter.csharp">C#</span>
                                 </button>
                                 <button class="filter-btn" data-filter="lang-sql">
-                                    <i class="fas fa-database"></i> SQL
+                                    <i class="fas fa-database"></i> <span data-i18n="portfolio.filter.sql">SQL</span>
                                 </button>
                                 <button class="filter-btn" data-filter="lang-html">
-                                    <i class="fab fa-html5"></i> HTML/CSS
+                                    <i class="fab fa-html5"></i> <span data-i18n="portfolio.filter.htmlcss">HTML/CSS</span>
                                 </button>
                             </div>
                         </div>
 
                         <div class="filter-group">
-                            <label>Statut</label>
+                            <label data-i18n="portfolio.filter.status.title">Statut</label>
                             <div class="filter-buttons secondary-filters">
                                 <button class="filter-btn" data-filter="termine">
-                                    <i class="fas fa-circle-check"></i> Terminé
+                                    <i class="fas fa-circle-check"></i> <span data-i18n="portfolio.filter.termine">Terminé</span>
                                 </button>
                                 <button class="filter-btn" data-filter="en-cours">
-                                    <i class="fas fa-circle-dot"></i> En cours
+                                    <i class="fas fa-circle-dot"></i> <span data-i18n="portfolio.filter.encours">En cours</span>
                                 </button>
                             </div>
                         </div>
@@ -333,22 +334,22 @@
                         <img src="images/Logo Mobelec.jpg" alt="Mobelec">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-stage">Stage</span>
+                                <span class="badge badge-stage" data-i18n="portfolio.filter.stages">Stage</span>
                                 <span class="badge badge-tech">Tech</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Stage — Mobelec</h3>
-                        <p class="card-description">Configuration de bornes de recharge électrique pour un lycée. Mise en place d'infrastructure IoT et réseau.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project1Title">Stage — Mobelec</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project1Desc">Configuration de bornes de recharge électrique pour un lycée. Mise en place d'infrastructure IoT et réseau.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Infrastructure</span>
                             <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Réseau</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects1Word3">Réseau</span>
                         </div>
                         <div class="card-actions">
                             <a href="Stage1/Stage1.html" class="btn btn-primary">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </a>
                         </div>
                     </div>
@@ -359,14 +360,14 @@
                         <img src="images/logoACPPA.png" alt="ACPPA">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-stage">Stage</span>
+                                <span class="badge badge-stage" data-i18n="portfolio.filter.stages">Stage</span>
                                 <span class="badge badge-tech">Tech</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Stage — Groupe ACPPA</h3>
-                        <p class="card-description">Support technique, maintenance système et assistance utilisateurs au sein d'un groupe de résidences médicalisées.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project2Title">Stage — Groupe ACPPA</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project2Desc">Support technique, maintenance système et assistance utilisateurs au sein d'un groupe de résidences médicalisées.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Support</span>
                             <span class="tech-tag">Maintenance</span>
@@ -374,7 +375,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="Stage2/Stage2.html" class="btn btn-primary">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </a>
                         </div>
                     </div>
@@ -394,8 +395,8 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">GLPI — Gestion du parc</h3>
-                        <p class="card-description">Déploiement de GLPI pour centraliser la gestion du matériel, des logiciels et des tickets d'assistance.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project3Title">GLPI — Gestion du parc</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project3Desc">Déploiement de GLPI pour centraliser la gestion du matériel, des logiciels et des tickets d'assistance.</p>
                         <div class="card-tech">
                             <span class="tech-tag">GLPI</span>
                             <span class="tech-tag">Apache</span>
@@ -403,7 +404,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="GLPI/GLPI.html" class="btn btn-primary">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </a>
                         </div>
                     </div>
@@ -422,8 +423,8 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Application Supérette</h3>
-                        <p class="card-description">Application C# de gestion complète pour une supérette : réserve, rayons, familles, clients, caisse et tickets.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project4Title">Application Supérette</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project4Desc">Application C# de gestion complète pour une supérette : réserve, rayons, familles, clients, caisse et tickets.</p>
                         <div class="card-tech">
                             <span class="tech-tag">C#</span>
                             <span class="tech-tag">.NET</span>
@@ -431,7 +432,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="Superette/Superette.html" class="btn btn-primary">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </a>
                         </div>
                     </div>
@@ -450,8 +451,8 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Gestion de stocks</h3>
-                        <p class="card-description">Application web Laravel de gestion de stocks avec interface d'administration, CRUD complet et authentification.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project5Title">Gestion de stocks</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project5Desc">Application web Laravel de gestion de stocks avec interface d'administration, CRUD complet et authentification.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Laravel</span>
                             <span class="tech-tag">MySQL</span>
@@ -459,7 +460,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="Stage2/Gestion_Stock/documentation_gestion_stock.html" class="btn btn-primary">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </a>
                         </div>
                     </div>
@@ -473,15 +474,15 @@
                         </div>
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
-                                <span class="badge badge-ia">IA</span>
-                                <span class="badge badge-wip">En cours</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
+                                <span class="badge badge-ia" data-i18n="portfolio.filter.ia">IA</span>
+                                <span class="badge badge-wip" data-i18n="portfolio.filter.encours">En cours</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Assistante Vocale</h3>
-                        <p class="card-description">Assistant vocal Python capable d'ouvrir des fichiers, accéder à des sites web et lancer de la musique sur Spotify via commandes vocales.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project6Title">Assistante Vocale</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project6Desc">Assistant vocal Python capable d'ouvrir des fichiers, accéder à des sites web et lancer de la musique sur Spotify via commandes vocales.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Speech Recognition</span>
@@ -502,14 +503,14 @@
                         </div>
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
-                                <span class="badge badge-ia">IA</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
+                                <span class="badge badge-ia" data-i18n="portfolio.filter.ia">IA</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Création d'IA</h3>
-                        <p class="card-description">Système d'IA capable de trouver des informations dans une base de données SQL avec descriptions et apprentissage automatique.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project7Title">Création d'IA</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project7Desc">Système d'IA capable de trouver des informations dans une base de données SQL avec descriptions et apprentissage automatique.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">SQL</span>
@@ -517,7 +518,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="IA/AI_projet_moderne.html" class="btn btn-primary">
-                                <i class="fas fa-eye"></i> Voir étapes
+                                <i class="fas fa-eye"></i> <span data-i18n="portfolio.btn.step"> Voir étapes
                             </a>
                         </div>
                     </div>
@@ -531,15 +532,15 @@
                         </div>
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
                                 <span class="badge badge-tech">Tech</span>
-                                <span class="badge badge-new">Nouveau</span>
+                                <span class="badge badge-new" data-i18n="portfolio.filter.new">Nouveau</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">MailAuto — Météo par e-mail</h3>
-                        <p class="card-description">Service Node.js qui envoie automatiquement chaque matin un e-mail avec les prévisions météo complètes et un graphique SVG. Première utilisation du format JSON pour consommer l'API REST OpenWeather.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project8Title">MailAuto — Météo par e-mail</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project8Desc">Service Node.js qui envoie automatiquement chaque matin un e-mail avec les prévisions météo complètes et un graphique SVG. Première utilisation du format JSON pour consommer l'API REST OpenWeather.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">JSON</span>
@@ -549,7 +550,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="https://github.com/Taropo98/MailAutoPub" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i> Voir le code
+                                <i class="fab fa-github"></i> <span data-i18n="portfolio.btn.code"> Voir le code </span>
                             </a>
                         </div>
                     </div>
@@ -561,21 +562,21 @@
                         <img src="images/Midjourney.png" alt="Midjourney">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-outils">Outil IA</span>
+                                <span class="badge badge-outils" data-i18n="portfolio.filter.IATool">Outil IA</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Midjourney</h3>
-                        <p class="card-description">IA pour la création d'images de haute qualité à partir de descriptions textuelles (prompt engineering).</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project9Desc">IA pour la création d'images de haute qualité à partir de descriptions textuelles (prompt engineering).</p>
                         <div class="card-tech">
-                            <span class="tech-tag">Génération d'images</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects9Word1">Génération d'images</span>
                             <span class="tech-tag">Prompt</span>
-                            <span class="tech-tag">IA créative</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects9Word3">IA créative</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" onclick="openModal('midjourney')">
-                                <i class="fas fa-info"></i> En savoir plus
+                                <i class="fas fa-info"></i> <span data-i18n="portfolio.btn.Info"> En savoir plus </span>
                             </button>
                         </div>
                     </div>
@@ -586,21 +587,21 @@
                         <img src="images/Stable_Diffusion.png" alt="Stable Diffusion">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-outils">Outil IA</span>
+                                <span class="badge badge-outils" data-i18n="portfolio.filter.IATool">Outil IA</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Stable Diffusion</h3>
-                        <p class="card-description">IA open-source pour la création d'images, d'animations et de vidéos avec contrôle avancé des paramètres.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project10Desc">IA open-source pour la création d'images, d'animations et de vidéos avec contrôle avancé des paramètres.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Open Source</span>
                             <span class="tech-tag">Animation</span>
-                            <span class="tech-tag">Vidéo</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects10Word3">Vidéo</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" onclick="openModal('stablediffusion')">
-                                <i class="fas fa-info"></i> En savoir plus
+                                <i class="fas fa-info"></i> <span data-i18n="portfolio.btn.Info"> En savoir plus </span>
                             </button>
                         </div>
                     </div>
@@ -611,21 +612,21 @@
                         <img src="images/ChatGPT.png" alt="ChatGPT">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-outils">Outil IA</span>
+                                <span class="badge badge-outils" data-i18n="portfolio.filter.IATool">Outil IA</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">ChatGPT</h3>
-                        <p class="card-description">Utilisation avancée de ChatGPT pour la génération de texte, l'assistance au code et la résolution de problèmes.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project11Desc">Utilisation avancée de ChatGPT pour la génération de texte, l'assistance au code et la résolution de problèmes.</p>
                         <div class="card-tech">
                             <span class="tech-tag">LLM</span>
                             <span class="tech-tag">Prompt</span>
-                            <span class="tech-tag">Assistance code</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects11Word3">Assistance code</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" onclick="openModal('chatgpt')">
-                                <i class="fas fa-info"></i> En savoir plus
+                                <i class="fas fa-info"></i> <span data-i18n="portfolio.btn.Info"> En savoir plus </span>
                             </button>
                         </div>
                     </div>
@@ -636,14 +637,14 @@
                         <img src="images/Replay.png" alt="Replay">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-outils">Outil IA</span>
-                                <span class="badge badge-creative">Créatif</span>
+                                <span class="badge badge-outils" data-i18n="portfolio.filter.IATool">Outil IA</span>
+                                <span class="badge badge-creative" data-i18n="portfolio.filter.creatif">Créatif</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Replay</h3>
-                        <p class="card-description">Outil IA de remplacement de voix dans des musiques existantes pour créer des covers personnalisées.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project12Desc">Outil IA de remplacement de voix dans des musiques existantes pour créer des covers personnalisées.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Voice AI</span>
                             <span class="tech-tag">Audio</span>
@@ -651,7 +652,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" onclick="openModal('replay')">
-                                <i class="fas fa-info"></i> En savoir plus
+                                <i class="fas fa-info"></i> <span data-i18n="portfolio.btn.Info"> En savoir plus</span>
                             </button>
                         </div>
                     </div>
@@ -662,22 +663,22 @@
                         <img src="images/Suno.png" alt="Suno">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-outils">Outil IA</span>
-                                <span class="badge badge-creative">Créatif</span>
+                                <span class="badge badge-outils" data-i18n="portfolio.filter.IATool">Outil IA</span>
+                                <span class="badge badge-creative" data-i18n="portfolio.filter.creatif">Créatif</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Suno</h3>
-                        <p class="card-description">IA pour la création de musique originale à partir de descriptions textuelles et de styles musicaux.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project13Desc">IA pour la création de musique originale à partir de descriptions textuelles et de styles musicaux.</p>
                         <div class="card-tech">
-                            <span class="tech-tag">Génération musicale</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects13Word1">Génération musicale</span>
                             <span class="tech-tag">Audio</span>
-                            <span class="tech-tag">Créativité</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects13Word3">Créativité</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" onclick="openModal('suno')">
-                                <i class="fas fa-info"></i> En savoir plus
+                                <i class="fas fa-info"></i> <span data-i18n="portfolio.btn.Info"> En savoir plus </span>
                             </button>
                         </div>
                     </div>
@@ -691,15 +692,15 @@
                         </div>
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
-                                <span class="badge badge-video">Vidéo</span>
-                                <span class="badge badge-creative">Créatif</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
+                                <span class="badge badge-video" data-i18n="portfolio.filter.video">Vidéo</span>
+                                <span class="badge badge-creative" data-i18n="portfolio.filter.creatif">Créatif</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Montage For Honor</h3>
-                        <p class="card-description">Une de mes premières vidéos de montage gaming réalisée avec VideoPad pour apprendre les bases du montage vidéo.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project14Desc">Une de mes premières vidéos de montage gaming réalisée avec VideoPad pour apprendre les bases du montage vidéo.</p>
                         <div class="card-tech">
                             <span class="tech-tag">VideoPad</span>
                             <span class="tech-tag">Gaming</span>
@@ -707,7 +708,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="Video/for honor centurion montage.mp4" class="btn btn-primary" target="_blank">
-                                <i class="fas fa-play"></i> Voir vidéo
+                                <i class="fas fa-play"></i> <span data-i18n="portfolio.btn.Video"> Voir vidéo </span>
                             </a>
                         </div>
                     </div>
@@ -716,22 +717,27 @@
                 <div class="project-card" data-category="personnel video creative termine" data-keywords="fights montage filmora récent avancé effets">
                     <div class="card-image">
                         <div class="card-icon card-icon-video2">
-                                <span class="badge badge-video">Vidéo</span>
-                                <span class="badge badge-creative">Créatif</span>
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-badges">
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
+                                <span class="badge badge-video" data-i18n="portfolio.filter.video">Vidéo</span>
+                                <span class="badge badge-creative" data-i18n="portfolio.filter.creatif">Créatif</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Montage Fights</h3>
-                        <p class="card-description">Une de mes dernières vidéos montrant l'évolution de mes compétences en montage avec Wondershare Filmora.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project15Desc">Une de mes dernières vidéos montrant l'évolution de mes compétences en montage avec Wondershare Filmora.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Filmora</span>
-                            <span class="tech-tag">Effets avancés</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects15Word2">Effets avancés</span>
                             <span class="tech-tag">Gaming</span>
                         </div>
                         <div class="card-actions">
                             <a href="Video/Fights.mp4" class="btn btn-primary" target="_blank">
-                                <i class="fas fa-play"></i> Voir vidéo
+                                <i class="fas fa-play"></i> <span data-i18n="portfolio.btn.Video"> Voir vidéo </span>
                             </a>
                         </div>
                     </div>
@@ -745,15 +751,15 @@
                         </div>
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
-                                <span class="badge badge-jeux">Jeux</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
+                                <span class="badge badge-jeux" data-i18n="portfolio.filter.jeux">Jeux</span>
                                 <span class="badge badge-tech">Tech</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Flappy Bird</h3>
-                        <p class="card-description">Mon tout premier jeu inspiré de Flappy Bird, créé pour apprendre Unity et m'entraîner en programmation C#.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project16Desc">Mon tout premier jeu inspiré de Flappy Bird, créé pour apprendre Unity et m'entraîner en programmation C#.</p>
                         <div class="card-tech">
                             <span class="tech-tag">Unity</span>
                             <span class="tech-tag">C#</span>
@@ -761,7 +767,7 @@
                         </div>
                         <div class="card-actions">
                             <a href="Jeu/JeuDiego.zip" class="btn btn-primary" download>
-                                <i class="fas fa-download"></i> Télécharger
+                                <i class="fas fa-download"></i> <span data-i18n="portfolio.btn.Download"> Télécharger </span>
                             </a>
                         </div>
                     </div>
@@ -773,14 +779,14 @@
                         <img src="images/ecommerce_poupees.jpg" alt="AfricBantu">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
                                 <span class="badge badge-web">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">AfricBantu — E-commerce</h3>
-                        <p class="card-description">Site e-commerce de poupées noires célébrant la culture africaine avec 17 modèles uniques et storytelling authentique.</p>
+                        <p class="card-description" data-i18n="portfolio.footer.project17Desc">Site e-commerce de poupées noires célébrant la culture africaine avec 17 modèles uniques et storytelling authentique.</p>
                         <div class="card-tech">
                             <span class="tech-tag">E-commerce</span>
                             <span class="tech-tag">Responsive</span>
@@ -788,10 +794,10 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-primary" onclick="openModal('africbantu')">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </button>
                             <a href="https://africbantu.fr/" target="_blank" class="btn btn-outline">
-                                <i class="fas fa-external-link-alt"></i> Visiter
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.btn.visit"> Visiter </span>
                             </a>
                         </div>
                     </div>
@@ -802,25 +808,25 @@
                         <img src="images/location_machines.png" alt="FêteLoc">
                         <div class="card-overlay">
                             <div class="card-badges">
-                                <span class="badge badge-personnel">Personnel</span>
+                                <span class="badge badge-personnel" data-i18n="portfolio.filter.personnel">Personnel</span>
                                 <span class="badge badge-web">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">FêteLoc — Location</h3>
-                        <p class="card-description">Plateforme de location de machines pour événements (barbe à papa, glaces, pop-corn) avec processus en 4 étapes.</p>
+                        <h3 class="card-title" data-i18n="portfolio.footer.project18Title">FêteLoc — Location</h3>
+                        <p class="card-description" data-i18n="portfolio.footer.project18Desc">Plateforme de location de machines pour événements (barbe à papa, glaces, pop-corn) avec processus en 4 étapes.</p>
                         <div class="card-tech">
-                            <span class="tech-tag">Location</span>
-                            <span class="tech-tag">Événements</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects18Word1">Location</span>
+                            <span class="tech-tag" data-i18n="portfolio.footer.projects18Word2">Événements</span>
                             <span class="tech-tag">UX/UI</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-primary" onclick="openModal('feteloc')">
-                                <i class="fas fa-eye"></i> Voir détails
+                                <i class="fas fa-eye"></i><span data-i18n="portfolio.btn.details"> Voir détails </span>
                             </button>
                             <a href="https://feteloc.fr/" target="_blank" class="btn btn-outline">
-                                <i class="fas fa-external-link-alt"></i> Visiter
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.btn.visit"> Visiter </span>
                             </a>
                         </div>
                     </div>
@@ -832,9 +838,9 @@
             <div class="no-results" id="noResults" style="display: none;">
                 <div class="no-results-content">
                     <i class="fas fa-search"></i>
-                    <h3>Aucun projet trouvé</h3>
-                    <p>Essayez de modifier vos filtres ou votre recherche</p>
-                    <button class="btn btn-primary" onclick="resetFilters()">
+                    <h3 data-i18n="portfolio.noresult">Aucun projet trouvé</h3>
+                    <p data-i18n="portfolio.noresult.sub">Essayez de modifier vos filtres ou votre recherche</p>
+                    <button class="btn btn-primary" data-i18n="portfolio.noresult.reset" onclick="resetFilters()">
                         <i class="fas fa-rotate-left"></i> Réinitialiser
                     </button>
                 </div>
@@ -852,11 +858,11 @@
                     <p><i class="fas fa-envelope"></i> diegotar005@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +33 7 83 12 59 88</p>
                     <a href="../CV_Diego_Petrachi.pdf" class="btn btn-primary" download style="margin-top:0.75rem; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.85rem; padding:0.5rem 1rem; border-radius:2rem;">
-                        <i class="fas fa-file-download"></i> Télécharger mon CV
+                        <i class="fas fa-file-download"></i> <span data-i18n="portfolio.footer.CV"> Télécharger mon CV
                     </a>
                 </div>
                 <div class="footer-section">
-                    <h3>Réseaux sociaux</h3>
+                    <h3 data-i18n="portfolio.footer.network">Réseaux</h3>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/diego-petrachi-071a72267/" target="_blank">
                             <i class="fab fa-linkedin"></i>
@@ -872,15 +878,15 @@
                 <div class="footer-section">
                     <h3>Navigation</h3>
                     <a href="../index.html" style="color:rgba(255,255,255,0.7); text-decoration:none; display:block; margin-bottom:0.4rem;">
-                        <i class="fas fa-home"></i> Accueil
+                        <i class="fas fa-home"></i> <span data-i18n="nav.home"> Accueil </span>
                     </a>
                     <a href="#projets" style="color:rgba(255,255,255,0.7); text-decoration:none; display:block;">
-                        <i class="fas fa-folder-open"></i> Tous les projets
+                        <i class="fas fa-folder-open"></i> <span data-i18n="skills.git.projects"> Tous les projets </span>
                     </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
+                <p data-i18n="portfolio.footer.rights">&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -899,5 +905,6 @@
     </div>
 
     <script src="portfolio_moderne.js"></script>
+    <script src="../i18n.js"></script>
 </body>
 </html>

@@ -18,13 +18,16 @@
             </div>
             <div class="nav-menu">
                 <a href="../../index.html" class="nav-link">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-home"></i> <span data-i18n="nav.home">
                     Accueil
                 </a>
                 <a href="../portfolio_moderne.html" class="nav-link">
-                    <i class="fas fa-folder-open"></i>
+                    <i class="fas fa-folder-open"></i> <span data-i18n="nav.projects">
                     Projets
                 </a>
+                <button id="lang-toggle" class="lang-toggle-btn" title="Switch to English">
+                    <span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span>
+                </button>
             </div>
             <div class="nav-toggle">
                 <span></span>
@@ -38,11 +41,11 @@
     <div class="breadcrumb-section">
         <div class="breadcrumb-container">
             <nav class="breadcrumb">
-                <a href="../../index.html">Accueil</a>
+                <a href="../../index.html" span data-i18n="nav.home">Accueil</a>
                 <i class="fas fa-chevron-right"></i>
-                <a href="../portfolio_moderne.html">Projets</a>
+                <a href="../portfolio_moderne.html" span data-i18n="nav.projects">Projets</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Stage Mobelec</span>
+                <span data-i18n="portfolio.footer.project1Title">Stage Mobelec</span>
             </nav>
         </div>
     </div>
@@ -53,19 +56,18 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-briefcase"></i>
-                    <span>Stage Professionnel</span>
+                    <span data-i18n="portfolio.stage1.hero1">Stage Professionnel</span>
                 </div>
-                <h1 class="hero-title">
-                    Stage chez
-                    <span class="gradient-text">Mobelec</span>
+                <h1 class="hero-title" data-i18n="portfolio.footer.project1Title">
+                    Stage Mobelec
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-i18n="portfolio.stage1.hero3">
                     Configuration de bornes électriques pour un lycée - Intégration IoT et systèmes de gestion
                 </p>
                 <div class="hero-badges">
                     <div class="info-badge">
                         <i class="fas fa-calendar"></i>
-                        <span>6 semaines</span>
+                        <span data-i18n="portfolio.stage1.hero4">6 semaines</span>
                     </div>
                     <div class="info-badge">
                         <i class="fas fa-map-marker-alt"></i>
@@ -73,7 +75,7 @@
                     </div>
                     <div class="info-badge">
                         <i class="fas fa-users"></i>
-                        <span>Équipe de 2</span>
+                        <span data-i18n="portfolio.stage1.hero6">Équipe de 2</span>
                     </div>
                 </div>
             </div>
@@ -109,17 +111,18 @@
                     <div class="section-icon">
                         <i class="fas fa-info-circle"></i>
                     </div>
-                    <h2 class="section-title">Contexte du Stage</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.ContextTitle">Contexte du Stage</h2>
                 </div>
                 <div class="card-content">
-                    <p>Durant mon stage chez <strong>Mobelec</strong>, situé à Pépinière de Valpré à Écully, un espace dédié aux jeunes entrepreneurs, j'ai été en binôme avec un autre stagiaire. Nous avons travaillé de manière autonome, étant donné que l'entreprise ne comptait que deux personnes : le directeur et notre tuteur.</p>
-                    <p>Notre mission était d'envergure et nécessitait un investissement prolongé dans un environnement startup dynamique.</p>
-                    
+                    <span data-i18n="portfolio.stage1.Context1">
+                        <p>Durant mon stage chez <strong>Mobelec</strong>, situé à Pépinière de Valpré à Écully, un espace dédié aux jeunes entrepreneurs, j'ai été en binôme avec un autre stagiaire. Nous avons travaillé de manière autonome, étant donné que l'entreprise ne comptait que deux personnes : le directeur et notre tuteur.</p>
+                        <p>Notre mission était d'envergure et nécessitait un investissement prolongé dans un environnement startup dynamique.</p>
+                    </span>
                     <div class="highlight-box">
                         <i class="fas fa-lightbulb"></i>
                         <div>
-                            <h4>Environnement Startup</h4>
-                            <p>Travail en autonomie complète dans une jeune entreprise innovante spécialisée dans les solutions IoT pour la mobilité électrique.</p>
+                            <h4 data-i18n="portfolio.stage1.Context2Title">Environnement Startup</h4>
+                            <p data-i18n="portfolio.stage1.Context2">Travail en autonomie complète dans une jeune entreprise innovante spécialisée dans les solutions IoT pour la mobilité électrique.</p>
                         </div>
                     </div>
                 </div>
@@ -131,25 +134,25 @@
                     <div class="section-icon">
                         <i class="fas fa-tasks"></i>
                     </div>
-                    <h2 class="section-title">Mission Assignée</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.MissionTitle">Mission Assignée</h2>
                 </div>
                 <div class="card-content">
-                    <p>Notre mission consistait à installer et configurer des bornes électriques dans le parking du lycée Parc Chabrières, afin de les intégrer à un système géré par des tablettes et une télévision installée dans une salle de classe.</p>
+                    <p data-i18n="portfolio.stage1.Mission1">Notre mission consistait à installer et configurer des bornes électriques dans le parking du lycée Parc Chabrières, afin de les intégrer à un système géré par des tablettes et une télévision installée dans une salle de classe.</p>
                     
                     <div class="mission-split">
                         <div class="mission-part">
                             <div class="mission-icon">
                                 <i class="fas fa-cogs"></i>
                             </div>
-                            <h4>Ma Responsabilité</h4>
-                            <p>Configuration des bornes vers les tablettes et la télévision, paramétrage des systèmes de communication et interface utilisateur.</p>
+                            <h4 data-i18n="portfolio.stage1.Mission2Title">Ma Responsabilité</h4>
+                            <p data-i18n="portfolio.stage1.Mission2">Configuration des bornes vers les tablettes et la télévision, paramétrage des systèmes de communication et interface utilisateur.</p>
                         </div>
                         <div class="mission-part">
                             <div class="mission-icon">
                                 <i class="fas fa-tools"></i>
                             </div>
-                            <h4>Collègue</h4>
-                            <p>Installation physique des bornes électriques, câblage et mise en place de l'infrastructure matérielle.</p>
+                            <h4 data-i18n="portfolio.stage1.Mission3Title">Collègue</h4>
+                            <p data-i18n="portfolio.stage1.Mission3">Installation physique des bornes électriques, câblage et mise en place de l'infrastructure matérielle.</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +164,7 @@
                     <div class="section-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
-                    <h2 class="section-title">Technologies Utilisées</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.TechnoTitle">Technologies Utilisées</h2>
                 </div>
                 <div class="card-content">
                     <div class="tech-grid">
@@ -169,29 +172,29 @@
                             <div class="tech-icon">
                                 <i class="fas fa-charging-station"></i>
                             </div>
-                            <h4>Bornes Électriques</h4>
-                            <p>Configuration et paramétrage des bornes de recharge intelligentes</p>
+                            <h4 data-i18n="portfolio.stage1.Techno1Title">Bornes Électriques</h4>
+                            <p data-i18n="portfolio.stage1.Techno1">Configuration et paramétrage des bornes de recharge intelligentes</p>
                         </div>
                         <div class="tech-item">
                             <div class="tech-icon">
                                 <i class="fas fa-tablet-alt"></i>
                             </div>
-                            <h4>Tablettes de Gestion</h4>
-                            <p>Interface de contrôle et monitoring en temps réel</p>
+                            <h4 data-i18n="portfolio.stage1.Techno2Title">Tablettes de Gestion</h4>
+                            <p data-i18n="portfolio.stage1.Techno2">Interface de contrôle et monitoring en temps réel</p>
                         </div>
                         <div class="tech-item">
                             <div class="tech-icon">
                                 <i class="fas fa-tv"></i>
                             </div>
-                            <h4>Écran de Supervision</h4>
-                            <p>Affichage centralisé des données et statistiques</p>
+                            <h4 data-i18n="portfolio.stage1.Techno3Title">Écran de Supervision</h4>
+                            <p data-i18n="portfolio.stage1.Techno3">Affichage centralisé des données et statistiques</p>
                         </div>
                         <div class="tech-item">
                             <div class="tech-icon">
                                 <i class="fas fa-wifi"></i>
                             </div>
-                            <h4>Réseau IoT</h4>
-                            <p>Communication sans fil entre les équipements</p>
+                            <h4 data-i18n="portfolio.stage1.Techno4Title">Réseau IoT</h4>
+                            <p data-i18n="portfolio.stage1.Techno4">Communication sans fil entre les équipements</p>
                         </div>
                     </div>
                 </div>
@@ -203,7 +206,7 @@
                     <div class="section-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
-                    <h2 class="section-title">Réalisations</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.ResultTitle">Réalisations</h2>
                 </div>
                 <div class="card-content">
                     <div class="achievements-list">
@@ -212,8 +215,8 @@
                                 <i class="fas fa-check"></i>
                             </div>
                             <div class="achievement-content">
-                                <h4>Configuration Réseau</h4>
-                                <p>Mise en place de la communication entre bornes, tablettes et écran de supervision</p>
+                                <h4 data-i18n="portfolio.stage1.Result1Title">Configuration Réseau</h4>
+                                <p data-i18n="portfolio.stage1.Result1">Mise en place de la communication entre bornes, tablettes et écran de supervision</p>
                             </div>
                         </div>
                         <div class="achievement-item">
@@ -221,8 +224,8 @@
                                 <i class="fas fa-check"></i>
                             </div>
                             <div class="achievement-content">
-                                <h4>Interface Utilisateur</h4>
-                                <p>Paramétrage des interfaces de gestion sur tablettes pour un contrôle intuitif</p>
+                                <h4 data-i18n="portfolio.stage1.Result2Title">Interface Utilisateur</h4>
+                                <p data-i18n="portfolio.stage1.Result2">Paramétrage des interfaces de gestion sur tablettes pour un contrôle intuitif</p>
                             </div>
                         </div>
                         <div class="achievement-item">
@@ -230,8 +233,8 @@
                                 <i class="fas fa-check"></i>
                             </div>
                             <div class="achievement-content">
-                                <h4>Tests et Validation</h4>
-                                <p>Vérification du bon fonctionnement de l'ensemble du système intégré</p>
+                                <h4 data-i18n="portfolio.stage1.Result3Title">Tests et Validation</h4>
+                                <p data-i18n="portfolio.stage1.Result3">Vérification du bon fonctionnement de l'ensemble du système intégré</p>
                             </div>
                         </div>
                         <div class="achievement-item">
@@ -239,8 +242,8 @@
                                 <i class="fas fa-check"></i>
                             </div>
                             <div class="achievement-content">
-                                <h4>Documentation</h4>
-                                <p>Rédaction de la documentation technique pour la maintenance future</p>
+                                <h4 data-i18n="portfolio.stage1.Result4Title">Documentation</h4>
+                                <p data-i18n="portfolio.stage1.Result4">Rédaction de la documentation technique pour la maintenance future</p>
                             </div>
                         </div>
                     </div>
@@ -253,22 +256,22 @@
                     <div class="section-icon">
                         <i class="fas fa-images"></i>
                     </div>
-                    <h2 class="section-title">Galerie du Projet</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.PhotoTitle"">Galerie du Projet</h2>
                 </div>
                 <div class="card-content">
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <img src="../images/TP-LINK.jpg" alt="Équipement TP-LINK">
                             <div class="gallery-overlay">
-                                <h4>Équipement TP-LINK</h4>
-                                <p>Matériel réseau pour la communication</p>
+                                <h4 data-i18n="portfolio.stage1.Photo1Title">Équipement TP-LINK</h4>
+                                <p data-i18n="portfolio.stage1.Photo1">Matériel réseau pour la communication</p>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <img src="../images/Teltonika.jpg" alt="Équipement Teltonika">
                             <div class="gallery-overlay">
-                                <h4>Équipement Teltonika</h4>
-                                <p>Routeur industriel pour l'IoT</p>
+                                <h4 data-i18n="portfolio.stage1.Photo2Title">Équipement Teltonika</h4>
+                                <p data-i18n="portfolio.stage1.Photo2">Routeur industriel pour l'IoT</p>
                             </div>
                         </div>
                     </div>
@@ -281,40 +284,40 @@
                     <div class="section-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <h2 class="section-title">Compétences Développées</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.SkillTitle">Compétences Développées</h2>
                 </div>
                 <div class="card-content">
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <h4><i class="fas fa-network-wired"></i> Réseau & IoT</h4>
+                            <h4 data-i18n="portfolio.stage1.Skill1Title"><i class="fas fa-network-wired"></i> Réseau & IoT</h4>
                             <ul>
-                                <li>Configuration d'équipements réseau</li>
-                                <li>Protocoles de communication IoT</li>
-                                <li>Troubleshooting réseau</li>
+                                <li data-i18n="portfolio.stage1.Skill11">Configuration d'équipements réseau</li>
+                                <li data-i18n="portfolio.stage1.Skill12">Protocoles de communication IoT</li>
+                                <li data-i18n="portfolio.stage1.Skill13">Troubleshooting réseau</li>
                             </ul>
                         </div>
                         <div class="skill-category">
-                            <h4><i class="fas fa-cogs"></i> Systèmes Embarqués</h4>
+                            <h4 data-i18n="portfolio.stage1.Skill2Title"><i class="fas fa-cogs"></i> Systèmes Embarqués</h4>
                             <ul>
-                                <li>Paramétrage de bornes intelligentes</li>
-                                <li>Interface homme-machine</li>
-                                <li>Intégration de systèmes</li>
+                                <li data-i18n="portfolio.stage1.Skill21">Paramétrage de bornes intelligentes</li>
+                                <li data-i18n="portfolio.stage1.Skill22">Interface homme-machine</li>
+                                <li data-i18n="portfolio.stage1.Skill23">Intégration de systèmes</li>
                             </ul>
                         </div>
                         <div class="skill-category">
                             <h4><i class="fas fa-users"></i> Soft Skills</h4>
                             <ul>
-                                <li>Travail en équipe</li>
-                                <li>Autonomie et initiative</li>
-                                <li>Gestion de projet</li>
+                                <li data-i18n="portfolio.stage1.Skill31">Travail en équipe</li>
+                                <li data-i18n="portfolio.stage1.Skill32">Autonomie et initiative</li>
+                                <li data-i18n="portfolio.stage1.Skill33">Gestion de projet</li>
                             </ul>
                         </div>
                         <div class="skill-category">
                             <h4><i class="fas fa-file-alt"></i> Documentation</h4>
                             <ul>
-                                <li>Rédaction technique</li>
-                                <li>Schémas et diagrammes</li>
-                                <li>Procédures de maintenance</li>
+                                <li data-i18n="portfolio.stage1.Skill41">Rédaction technique</li>
+                                <li data-i18n="portfolio.stage1.Skill42">Schémas et diagrammes</li>
+                                <li data-i18n="portfolio.stage1.Skill43">Procédures de maintenance</li>
                             </ul>
                         </div>
                     </div>
@@ -327,7 +330,7 @@
                     <div class="section-icon">
                         <i class="fas fa-file-download"></i>
                     </div>
-                    <h2 class="section-title">Documents du Stage</h2>
+                    <h2 class="section-title" data-i18n="portfolio.stage1.DocTitle">Documents du Stage</h2>
                 </div>
                 <div class="card-content">
                     <div class="documents-grid">
@@ -336,8 +339,8 @@
                                 <i class="fas fa-file-pdf"></i>
                             </div>
                             <div class="document-info">
-                                <h4>Compte Rendu de Stage</h4>
-                                <p>Rapport détaillé des missions et réalisations</p>
+                                <h4 data-i18n="portfolio.stage1.Doc1Title">Compte Rendu de Stage</h4>
+                                <p data-i18n="portfolio.stage1.Doc1">Rapport détaillé des missions et réalisations</p>
                                 <span class="document-size">PDF • 1.4 MB</span>
                             </div>
                             <div class="document-action">
@@ -360,14 +363,14 @@
                         <i class="fas fa-code"></i>
                         <span>Diego Petrachi</span>
                     </div>
-                    <p>Stage professionnel chez Mobelec - Configuration de bornes électriques et systèmes IoT</p>
+                    <p data-i18n="portfolio.stage1.footerDesc">Stage professionnel chez Mobelec - Configuration de bornes électriques et systèmes IoT</p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="../../index.html">Accueil</a></li>
-                        <li><a href="../portfolio_moderne.html">Projets</a></li>
+                        <li><a href="../../index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="../portfolio_moderne.html" data-i18n="nav.projects">Projets</a></li>
                     </ul>
                 </div>
                 
@@ -381,7 +384,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
+                <p data-i18n="portfolio.footer.rights">&copy; 2025 Diego Petrachi. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -392,6 +395,7 @@
     </button>
 
     <script src="Stage1_moderne.js"></script>
+    <script src="../../i18n.js"></script>
 </body>
 </html>
 
